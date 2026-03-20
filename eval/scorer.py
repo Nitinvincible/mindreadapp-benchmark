@@ -12,7 +12,7 @@ import sys
 import os
 
 
-def extract_answer(response_text: str) -> str | None:
+def extract_answer(response_text: str | None) -> str | None:
     """Extract the final answer letter from a model response.
     
     Expected format:
@@ -21,6 +21,9 @@ def extract_answer(response_text: str) -> str | None:
     
     Returns uppercase letter (A-D) or None if not found.
     """
+    if not response_text:
+        return None
+
     # Try structured format first
     match = re.search(r"ANSWER:\s*([A-Da-d])", response_text)
     if match:

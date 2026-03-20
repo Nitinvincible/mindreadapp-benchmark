@@ -155,7 +155,7 @@ def compute_rci(model_outputs: list[dict[str, Any]], scenarios: dict[str, Any] |
         Dict with rci score, breakdown, and per-question details
     """
     correct_outputs = [o for o in model_outputs
-                       if o.get("predicted", "").upper() == o.get("correct", "").upper()]
+                       if (o.get("predicted") or "").upper() == (o.get("correct") or "").upper()]
     
     if not correct_outputs:
         return {

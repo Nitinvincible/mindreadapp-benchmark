@@ -38,6 +38,12 @@ try:
 except ImportError:
     HAS_GOOGLE = False
 
+try:
+    from sarvamai import SarvamAI  # type: ignore[import-not-found]
+    HAS_SARVAM = True
+except ImportError:
+    HAS_SARVAM = False
+
 # Import evaluation modules
 EVAL_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, EVAL_DIR)
@@ -96,6 +102,11 @@ MODEL_CONFIG = {
         "model_string": "meta-llama/Meta-Llama-3.1-70B-Instruct",
         "base_url": "https://api.together.xyz/v1",
         "requires": "openai"
+    },
+    "sarvam-30b": {
+        "provider": "sarvam",
+        "model_string": "sarvam-30b",
+        "requires": "sarvamai"
     }
 }
 
@@ -197,6 +208,26 @@ def call_google(model_string: str, api_key: str, prompt: str) -> str:
     return response.text or ""
 
 
+def call_sarvam(model_string: str, api_key: str, prompt: str) -> str:
+    """Call Sarvam AI API."""
+    if not HAS_SARVAM:
+        raise ImportError("sarvamai package not installed. Run: pip install sarvamai")
+    
+    client = SarvamAI(api_subscription_key=api_key)
+    response = client.chat.completions(
+        model=model_string,
+        messages=[
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": prompt}
+        ],
+        temperature=API_PARAMS["temperature"],
+        top_p=API_PARAMS["top_p"],
+        max_tokens=API_PARAMS["max_tokens"],
+    )
+    content = response.choices[0].message.content
+    return content if content is not None else ""
+
+
 def call_model(model_name: str, api_key: str, prompt: str) -> str:
     """Route to the appropriate API caller."""
     config = MODEL_CONFIG.get(model_name)
@@ -213,6 +244,8 @@ def call_model(model_name: str, api_key: str, prompt: str) -> str:
         return call_anthropic(model_string, api_key, prompt)
     elif provider == "google":
         return call_google(model_string, api_key, prompt)
+    elif provider == "sarvam":
+        return call_sarvam(model_string, api_key, prompt)
     else:
         raise ValueError(f"Unknown provider: {provider}")
 
@@ -304,9 +337,10 @@ Available models:
   claude-3.5-sonnet Anthropic Claude 3.5 Sonnet
   gemini-2.0-flash  Google Gemini 2.0 Flash
   llama-3.1-70b     Meta Llama 3.1 70B (via Together AI)
+  sarvam-30b        Sarvam 30B
 
 Examples:
-  python run_benchmark.py --model gemini-2.0-flash --api-key YOUR_KEY --sample
+  python run_benchmark.py --model sarvam-30b --api-key YOUR_SARVAM_KEY --sample
   python run_benchmark.py --model gpt-4o --api-key sk-... --delay 2.0
         """
     )
