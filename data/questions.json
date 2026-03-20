@@ -1,0 +1,2702 @@
+[
+  {
+    "question_id": "Q_SCN001_T1",
+    "scenario_id": "SCN_001",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Sara has witnessed, what does Sara believe about the notebook location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Sara does not know",
+      "B": "drawer",
+      "C": "Sara has no opinion about it",
+      "D": "kitchen table"
+    },
+    "correct_answer": "D",
+    "explanation": "Sara only witnessed event_1, event_3. They did not witness event_2. Therefore, Sara believes the notebook location is: kitchen table.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN001_T2",
+    "scenario_id": "SCN_001",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Sara think Tom believes about the notebook location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Tom has never encountered the notebook location",
+      "B": "Sara thinks Tom doesn't know about the notebook location",
+      "C": "kitchen table",
+      "D": "drawer"
+    },
+    "correct_answer": "C",
+    "explanation": "Sara knows that Tom was present for event_1. From Sara's perspective, Tom's belief would be: kitchen table. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN001_T3",
+    "scenario_id": "SCN_001",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Sara had witnessed event_2, what would Sara most likely think about Tom's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Tom was trying to help or organize",
+      "B": "Tom was unaware of the consequences",
+      "C": "Tom was confused or mistaken",
+      "D": "Tom was acting with hidden intent"
+    },
+    "correct_answer": "D",
+    "explanation": "Counterfactually, if Sara had witnessed event_2 (Tom moves the notebook to the drawer while Sara is in the garden.), Sara would likely interpret Tom's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN002_T1",
+    "scenario_id": "SCN_002",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Liam has witnessed, what does Liam believe about the gift location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "garage",
+      "B": "true but does not know it is a gift",
+      "C": "hallway closet",
+      "D": "Liam does not know"
+    },
+    "correct_answer": "C",
+    "explanation": "Liam only witnessed event_1. They did not witness event_2, event_3. Therefore, Liam believes the gift location is: hallway closet.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN002_T2",
+    "scenario_id": "SCN_002",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Liam think Nora believes about the gift location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "garage",
+      "B": "true but does not know it is a gift",
+      "C": "Liam thinks Nora doesn't know about the gift location",
+      "D": "hallway closet"
+    },
+    "correct_answer": "D",
+    "explanation": "Liam knows that Nora was present for some events. From Liam's perspective, Nora's belief would be: hallway closet. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN002_T3",
+    "scenario_id": "SCN_002",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Liam had witnessed event_2, what would Liam most likely think about Nora's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Nora was trying to help or organize",
+      "B": "Nora was unaware of the consequences",
+      "C": "Nora was confused or mistaken",
+      "D": "Nora was acting with hidden intent"
+    },
+    "correct_answer": "D",
+    "explanation": "Counterfactually, if Liam had witnessed event_2 (Nora finds the gift while cleaning and moves it to the garage.), Liam would likely interpret Nora's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN003_T1",
+    "scenario_id": "SCN_003",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Emma has witnessed, what does Emma believe about the cookies status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "eaten by Ryan",
+      "B": "eaten by himself",
+      "C": "still on counter cooling",
+      "D": "Emma does not know"
+    },
+    "correct_answer": "C",
+    "explanation": "Emma only witnessed event_1, event_3. They did not witness event_2. Therefore, Emma believes the cookies status is: still on counter cooling.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN003_T2",
+    "scenario_id": "SCN_003",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Emma think Ryan believes about the cookies status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "eaten by himself",
+      "B": "Emma thinks Ryan doesn't know about the cookies status",
+      "C": "still on counter cooling",
+      "D": "eaten by Ryan"
+    },
+    "correct_answer": "C",
+    "explanation": "Emma knows that Ryan was present for event_1, event_3. From Emma's perspective, Ryan's belief would be: still on counter cooling. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN003_T3",
+    "scenario_id": "SCN_003",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Emma had witnessed event_2, what would Emma most likely think about Ryan's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Ryan was acting with hidden intent",
+      "B": "Ryan was confused or mistaken",
+      "C": "Ryan was trying to help or organize",
+      "D": "Ryan was unaware of the consequences"
+    },
+    "correct_answer": "A",
+    "explanation": "Counterfactually, if Emma had witnessed event_2 (Ryan eats all the cookies while Emma is upstairs.), Emma would likely interpret Ryan's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN004_T1",
+    "scenario_id": "SCN_004",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Mia has witnessed, what does Mia believe about the phone location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "bedroom",
+      "B": "Mia does not know",
+      "C": "bedroom (correct by coincidence)",
+      "D": "kitchen"
+    },
+    "correct_answer": "C",
+    "explanation": "Mia only witnessed event_1, event_4. They did not witness event_2, event_3. Therefore, Mia believes the phone location is: bedroom (correct by coincidence).",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN004_T2",
+    "scenario_id": "SCN_004",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Mia think David believes about the phone location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "bedroom",
+      "B": "kitchen",
+      "C": "Mia thinks David doesn't know about the phone location",
+      "D": "bedroom (correct by coincidence)"
+    },
+    "correct_answer": "D",
+    "explanation": "Mia knows that David was present for some events. From Mia's perspective, David's belief would be: bedroom (correct by coincidence). This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN004_T3",
+    "scenario_id": "SCN_004",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Mia had witnessed event_2, what would Mia most likely think about David's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "David was unaware of the consequences",
+      "B": "David was confused or mistaken",
+      "C": "David was trying to help or organize",
+      "D": "David was acting with hidden intent"
+    },
+    "correct_answer": "D",
+    "explanation": "Counterfactually, if Mia had witnessed event_2 (David takes Mia's phone to look up a recipe in the kitchen.), Mia would likely interpret David's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN005_T1",
+    "scenario_id": "SCN_005",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Olivia has witnessed, what does Olivia believe about the destination?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Olivia has no opinion about it",
+      "B": "grocery store",
+      "C": "pharmacy",
+      "D": "Olivia does not know"
+    },
+    "correct_answer": "C",
+    "explanation": "Olivia only witnessed event_1, event_2. They did not witness event_3. Therefore, Olivia believes the destination is: pharmacy.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN005_T2",
+    "scenario_id": "SCN_005",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Olivia think Ethan believes about the destination?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Olivia thinks Ethan doesn't know about the destination",
+      "B": "Ethan has never encountered the destination",
+      "C": "grocery store",
+      "D": "pharmacy"
+    },
+    "correct_answer": "D",
+    "explanation": "Olivia knows that Ethan was present for event_1. From Olivia's perspective, Ethan's belief would be: pharmacy. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN005_T3",
+    "scenario_id": "SCN_005",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Olivia had witnessed event_3, what would Olivia most likely think about Ethan's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Ethan was acting with hidden intent",
+      "B": "Ethan was trying to help or organize",
+      "C": "Ethan was unaware of the consequences",
+      "D": "Ethan was confused or mistaken"
+    },
+    "correct_answer": "A",
+    "explanation": "Counterfactually, if Olivia had witnessed event_3 (Chloe does not tell Ethan about the change of plans.), Olivia would likely interpret Ethan's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN006_T1",
+    "scenario_id": "SCN_006",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Noah has witnessed, what does Noah believe about the remote location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Noah has no opinion about it",
+      "B": "coffee table",
+      "C": "Noah does not know",
+      "D": "bookshelf"
+    },
+    "correct_answer": "B",
+    "explanation": "Noah only witnessed event_1, event_4. They did not witness event_2, event_3. Therefore, Noah believes the remote location is: coffee table.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN006_T2",
+    "scenario_id": "SCN_006",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Noah think Ava believes about the remote location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "bookshelf",
+      "B": "Ava has never encountered the remote location",
+      "C": "Noah thinks Ava doesn't know about the remote location",
+      "D": "coffee table"
+    },
+    "correct_answer": "D",
+    "explanation": "Noah knows that Ava was present for event_1. From Noah's perspective, Ava's belief would be: coffee table. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN006_T3",
+    "scenario_id": "SCN_006",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Noah had witnessed event_2, what would Noah most likely think about Ava's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Ava was trying to help or organize",
+      "B": "Ava was unaware of the consequences",
+      "C": "Ava was acting with hidden intent",
+      "D": "Ava was confused or mistaken"
+    },
+    "correct_answer": "C",
+    "explanation": "Counterfactually, if Noah had witnessed event_2 (Ava moves the remote to the bookshelf while Noah is in the bathroom.), Noah would likely interpret Ava's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN007_T1",
+    "scenario_id": "SCN_007",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Isabella has witnessed, what does Isabella believe about the present location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Isabella has no opinion about it",
+      "B": "Isabella does not know",
+      "C": "under the bed",
+      "D": "top of wardrobe"
+    },
+    "correct_answer": "D",
+    "explanation": "Isabella only witnessed event_1. They did not witness event_2, event_3. Therefore, Isabella believes the present location is: top of wardrobe.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN007_T2",
+    "scenario_id": "SCN_007",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Isabella think James believes about the present location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "top of wardrobe",
+      "B": "under the bed",
+      "C": "Isabella thinks James doesn't know about the present location",
+      "D": "James has never encountered the present location"
+    },
+    "correct_answer": "A",
+    "explanation": "Isabella knows that James was present for some events. From Isabella's perspective, James's belief would be: top of wardrobe. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN007_T3",
+    "scenario_id": "SCN_007",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Isabella had witnessed event_2, what would Isabella most likely think about James's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "James was acting with hidden intent",
+      "B": "James was confused or mistaken",
+      "C": "James was unaware of the consequences",
+      "D": "James was trying to help or organize"
+    },
+    "correct_answer": "A",
+    "explanation": "Counterfactually, if Isabella had witnessed event_2 (James sees Isabella going to the wardrobe and assumes she hid something there.), Isabella would likely interpret James's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN008_T1",
+    "scenario_id": "SCN_008",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Harper has witnessed, what does Harper believe about the dinner time?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "8 PM",
+      "B": "Harper has no opinion about it",
+      "C": "Harper does not know",
+      "D": "7 PM"
+    },
+    "correct_answer": "A",
+    "explanation": "Harper only witnessed event_1, event_2. They did not witness event_3. Therefore, Harper believes the dinner time is: 8 PM.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN008_T2",
+    "scenario_id": "SCN_008",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Harper think Daniel believes about the dinner time?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "7 PM",
+      "B": "Daniel has never encountered the dinner time",
+      "C": "Harper thinks Daniel doesn't know about the dinner time",
+      "D": "8 PM"
+    },
+    "correct_answer": "D",
+    "explanation": "Harper knows that Daniel was present for event_1, event_2. From Harper's perspective, Daniel's belief would be: 8 PM. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN008_T3",
+    "scenario_id": "SCN_008",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Harper had witnessed event_3, what would Harper most likely think about Daniel's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Daniel was confused or mistaken",
+      "B": "Daniel was unaware of the consequences",
+      "C": "Daniel was acting with hidden intent",
+      "D": "Daniel was trying to help or organize"
+    },
+    "correct_answer": "C",
+    "explanation": "Counterfactually, if Harper had witnessed event_3 (Grace asks Daniel what time dinner is, but Daniel is on the phone and doesn't hear her.), Harper would likely interpret Daniel's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN009_T1",
+    "scenario_id": "SCN_009",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Ella has witnessed, what does Ella believe about the keys location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "her pocket",
+      "B": "blue bowl",
+      "C": "behind shoe rack",
+      "D": "Ella does not know"
+    },
+    "correct_answer": "B",
+    "explanation": "Ella only witnessed event_1, event_4. They did not witness event_2, event_3. Therefore, Ella believes the keys location is: blue bowl.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN009_T2",
+    "scenario_id": "SCN_009",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Ella think Marcus believes about the keys location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "behind shoe rack",
+      "B": "Ella thinks Marcus doesn't know about the keys location",
+      "C": "blue bowl",
+      "D": "her pocket"
+    },
+    "correct_answer": "C",
+    "explanation": "Ella knows that Marcus was present for event_1. From Ella's perspective, Marcus's belief would be: blue bowl. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN009_T3",
+    "scenario_id": "SCN_009",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Ella had witnessed event_2, what would Ella most likely think about Marcus's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Marcus was unaware of the consequences",
+      "B": "Marcus was confused or mistaken",
+      "C": "Marcus was trying to help or organize",
+      "D": "Marcus was acting with hidden intent"
+    },
+    "correct_answer": "D",
+    "explanation": "Counterfactually, if Ella had witnessed event_2 (Marcus accidentally knocks the bowl and the keys fall behind the shoe rack.), Ella would likely interpret Marcus's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN010_T1",
+    "scenario_id": "SCN_010",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Aiden has witnessed, what does Aiden believe about the about own health?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "says fine but looks pale",
+      "B": "Aiden has no opinion about it",
+      "C": "sick",
+      "D": "Aiden does not know"
+    },
+    "correct_answer": "C",
+    "explanation": "Aiden only witnessed event_1, event_2. They did not witness event_3. Therefore, Aiden believes the about own health is: sick.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN010_T2",
+    "scenario_id": "SCN_010",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Aiden think Clara believes about the about own health?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Clara has never encountered the about own health",
+      "B": "says fine but looks pale",
+      "C": "sick",
+      "D": "Aiden thinks Clara doesn't know about the about own health"
+    },
+    "correct_answer": "C",
+    "explanation": "Aiden knows that Clara was present for event_1. From Aiden's perspective, Clara's belief would be: sick. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN010_T3",
+    "scenario_id": "SCN_010",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Aiden had witnessed event_3, what would Aiden most likely think about Clara's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Clara was acting with hidden intent",
+      "B": "Clara was trying to help or organize",
+      "C": "Clara was confused or mistaken",
+      "D": "Clara was unaware of the consequences"
+    },
+    "correct_answer": "A",
+    "explanation": "Counterfactually, if Aiden had witnessed event_3 (Clara notices Aiden looks pale but doesn't say anything.), Aiden would likely interpret Clara's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN011_T1",
+    "scenario_id": "SCN_011",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Penelope has witnessed, what does Penelope believe about the medicine location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Penelope does not know",
+      "B": "top kitchen cabinet",
+      "C": "Penelope has no opinion about it",
+      "D": "bathroom cabinet"
+    },
+    "correct_answer": "B",
+    "explanation": "Penelope only witnessed event_1, event_3. They did not witness event_2. Therefore, Penelope believes the medicine location is: top kitchen cabinet.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN011_T2",
+    "scenario_id": "SCN_011",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Penelope think Oscar believes about the medicine location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "top kitchen cabinet",
+      "B": "Oscar has never encountered the medicine location",
+      "C": "Penelope thinks Oscar doesn't know about the medicine location",
+      "D": "bathroom cabinet"
+    },
+    "correct_answer": "A",
+    "explanation": "Penelope knows that Oscar was present for event_1. From Penelope's perspective, Oscar's belief would be: top kitchen cabinet. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN011_T3",
+    "scenario_id": "SCN_011",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Penelope had witnessed event_2, what would Penelope most likely think about Oscar's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Oscar was acting with hidden intent",
+      "B": "Oscar was trying to help or organize",
+      "C": "Oscar was confused or mistaken",
+      "D": "Oscar was unaware of the consequences"
+    },
+    "correct_answer": "A",
+    "explanation": "Counterfactually, if Penelope had witnessed event_2 (Oscar moves the medicine to the bathroom cabinet for safety, while Penelope is asleep.), Penelope would likely interpret Oscar's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN012_T1",
+    "scenario_id": "SCN_012",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Ruby has witnessed, what does Ruby believe about the eggs location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "some near rose bush, some at birdbath",
+      "B": "Ruby has no opinion about it",
+      "C": "near rose bush",
+      "D": "Ruby does not know"
+    },
+    "correct_answer": "C",
+    "explanation": "Ruby only witnessed event_1, event_4. They did not witness event_2, event_3. Therefore, Ruby believes the eggs location is: near rose bush.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN012_T2",
+    "scenario_id": "SCN_012",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Ruby think Felix believes about the eggs location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "some near rose bush, some at birdbath",
+      "B": "Ruby thinks Felix doesn't know about the eggs location",
+      "C": "near rose bush",
+      "D": "Felix has never encountered the eggs location"
+    },
+    "correct_answer": "C",
+    "explanation": "Ruby knows that Felix was present for event_4. From Ruby's perspective, Felix's belief would be: near rose bush. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN012_T3",
+    "scenario_id": "SCN_012",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Ruby had witnessed event_2, what would Ruby most likely think about Felix's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Felix was trying to help or organize",
+      "B": "Felix was confused or mistaken",
+      "C": "Felix was unaware of the consequences",
+      "D": "Felix was acting with hidden intent"
+    },
+    "correct_answer": "D",
+    "explanation": "Counterfactually, if Ruby had witnessed event_2 (Felix watches through the window and sees Ruby hiding eggs near the rose bush.), Ruby would likely interpret Felix's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN013_T1",
+    "scenario_id": "SCN_013",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Violet has witnessed, what does Violet believe about the letter location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "missing from shelf, doesn't know about letter",
+      "B": "inside book on shelf",
+      "C": "a book, unaware of letter inside",
+      "D": "Violet does not know"
+    },
+    "correct_answer": "B",
+    "explanation": "Violet only witnessed event_1. They did not witness event_2, event_3. Therefore, Violet believes the letter location is: inside book on shelf.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN013_T2",
+    "scenario_id": "SCN_013",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Violet think Leo believes about the letter location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "inside book on shelf",
+      "B": "a book, unaware of letter inside",
+      "C": "missing from shelf, doesn't know about letter",
+      "D": "Violet thinks Leo doesn't know about the letter location"
+    },
+    "correct_answer": "A",
+    "explanation": "Violet knows that Leo was present for some events. From Violet's perspective, Leo's belief would be: inside book on shelf. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN013_T3",
+    "scenario_id": "SCN_013",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Violet had witnessed event_2, what would Violet most likely think about Leo's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Leo was trying to help or organize",
+      "B": "Leo was acting with hidden intent",
+      "C": "Leo was unaware of the consequences",
+      "D": "Leo was confused or mistaken"
+    },
+    "correct_answer": "B",
+    "explanation": "Counterfactually, if Violet had witnessed event_2 (Ivy borrows the book without knowing the letter is inside.), Violet would likely interpret Leo's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN014_T1",
+    "scenario_id": "SCN_014",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Theo has witnessed, what does Theo believe about the pitcher contains?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Theo does not know",
+      "B": "lemonade",
+      "C": "unknown liquid",
+      "D": "orange juice"
+    },
+    "correct_answer": "D",
+    "explanation": "Theo only witnessed event_1. They did not witness event_2, event_3. Therefore, Theo believes the pitcher contains is: orange juice.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN014_T2",
+    "scenario_id": "SCN_014",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Theo think Luna believes about the pitcher contains?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Theo thinks Luna doesn't know about the pitcher contains",
+      "B": "lemonade",
+      "C": "orange juice",
+      "D": "unknown liquid"
+    },
+    "correct_answer": "C",
+    "explanation": "Theo knows that Luna was present for event_1. From Theo's perspective, Luna's belief would be: orange juice. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN014_T3",
+    "scenario_id": "SCN_014",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Theo had witnessed event_2, what would Theo most likely think about Luna's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Luna was confused or mistaken",
+      "B": "Luna was trying to help or organize",
+      "C": "Luna was acting with hidden intent",
+      "D": "Luna was unaware of the consequences"
+    },
+    "correct_answer": "C",
+    "explanation": "Counterfactually, if Theo had witnessed event_2 (Luna drinks the last of the juice and refills the pitcher with lemonade.), Theo would likely interpret Luna's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN015_T1",
+    "scenario_id": "SCN_015",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Aria has witnessed, what does Aria believe about the restaurant?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Aria has no opinion about it",
+      "B": "Italian restaurant",
+      "C": "Aria does not know",
+      "D": "French bistro"
+    },
+    "correct_answer": "D",
+    "explanation": "Aria only witnessed event_1, event_2. They did not witness event_3. Therefore, Aria believes the restaurant is: French bistro.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN015_T2",
+    "scenario_id": "SCN_015",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Aria think Sam believes about the restaurant?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Sam has never encountered the restaurant",
+      "B": "French bistro",
+      "C": "Aria thinks Sam doesn't know about the restaurant",
+      "D": "Italian restaurant"
+    },
+    "correct_answer": "B",
+    "explanation": "Aria knows that Sam was present for event_1. From Aria's perspective, Sam's belief would be: French bistro. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN015_T3",
+    "scenario_id": "SCN_015",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Aria had witnessed event_3, what would Aria most likely think about Sam's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Sam was trying to help or organize",
+      "B": "Sam was acting with hidden intent",
+      "C": "Sam was unaware of the consequences",
+      "D": "Sam was confused or mistaken"
+    },
+    "correct_answer": "B",
+    "explanation": "Counterfactually, if Aria had witnessed event_3 (Sam buys a bottle of Italian wine as a gift for the dinner.), Aria would likely interpret Sam's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN016_T1",
+    "scenario_id": "SCN_016",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Owen has witnessed, what does Owen believe about the envelope location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "not on counter, no knowledge of envelope",
+      "B": "kitchen counter",
+      "C": "Owen does not know",
+      "D": "her purse"
+    },
+    "correct_answer": "B",
+    "explanation": "Owen only witnessed event_1. They did not witness event_2, event_3. Therefore, Owen believes the envelope location is: kitchen counter.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN016_T2",
+    "scenario_id": "SCN_016",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Owen think Stella believes about the envelope location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Owen thinks Stella doesn't know about the envelope location",
+      "B": "her purse",
+      "C": "not on counter, no knowledge of envelope",
+      "D": "kitchen counter"
+    },
+    "correct_answer": "D",
+    "explanation": "Owen knows that Stella was present for event_1. From Owen's perspective, Stella's belief would be: kitchen counter. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN016_T3",
+    "scenario_id": "SCN_016",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Owen had witnessed event_2, what would Owen most likely think about Stella's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Stella was trying to help or organize",
+      "B": "Stella was confused or mistaken",
+      "C": "Stella was acting with hidden intent",
+      "D": "Stella was unaware of the consequences"
+    },
+    "correct_answer": "C",
+    "explanation": "Counterfactually, if Owen had witnessed event_2 (Stella puts the envelope in her purse for safekeeping, intending to give it to the plumber herself.), Owen would likely interpret Stella's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN017_T1",
+    "scenario_id": "SCN_017",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Caleb has witnessed, what does Caleb believe about the flag status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Caleb does not know",
+      "B": "still marking the garden spot",
+      "C": "thrown away as litter",
+      "D": "still marking the spot (doesn't know it was removed)"
+    },
+    "correct_answer": "B",
+    "explanation": "Caleb only witnessed event_1. They did not witness event_2, event_3. Therefore, Caleb believes the flag status is: still marking the garden spot.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN017_T2",
+    "scenario_id": "SCN_017",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Caleb think Daisy believes about the flag status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "thrown away as litter",
+      "B": "still marking the spot (doesn't know it was removed)",
+      "C": "Caleb thinks Daisy doesn't know about the flag status",
+      "D": "still marking the garden spot"
+    },
+    "correct_answer": "D",
+    "explanation": "Caleb knows that Daisy was present for some events. From Caleb's perspective, Daisy's belief would be: still marking the garden spot. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN017_T3",
+    "scenario_id": "SCN_017",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Caleb had witnessed event_2, what would Caleb most likely think about Daisy's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Daisy was unaware of the consequences",
+      "B": "Daisy was trying to help or organize",
+      "C": "Daisy was confused or mistaken",
+      "D": "Daisy was acting with hidden intent"
+    },
+    "correct_answer": "D",
+    "explanation": "Counterfactually, if Caleb had witnessed event_2 (Daisy removes the flag thinking it's litter, while Caleb is at work.), Caleb would likely interpret Daisy's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN018_T1",
+    "scenario_id": "SCN_018",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Rachel has witnessed, what does Rachel believe about the report location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Archive folder",
+      "B": "Rachel does not know",
+      "C": "unknown, is asking",
+      "D": "Q3 Reports folder"
+    },
+    "correct_answer": "D",
+    "explanation": "Rachel only witnessed event_1, event_3. They did not witness event_2. Therefore, Rachel believes the report location is: Q3 Reports folder.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN018_T2",
+    "scenario_id": "SCN_018",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Rachel think Kevin believes about the report location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Q3 Reports folder",
+      "B": "Rachel thinks Kevin doesn't know about the report location",
+      "C": "unknown, is asking",
+      "D": "Archive folder"
+    },
+    "correct_answer": "A",
+    "explanation": "Rachel knows that Kevin was present for some events. From Rachel's perspective, Kevin's belief would be: Q3 Reports folder. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN018_T3",
+    "scenario_id": "SCN_018",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Rachel had witnessed event_2, what would Rachel most likely think about Kevin's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Kevin was acting with hidden intent",
+      "B": "Kevin was confused or mistaken",
+      "C": "Kevin was unaware of the consequences",
+      "D": "Kevin was trying to help or organize"
+    },
+    "correct_answer": "A",
+    "explanation": "Counterfactually, if Rachel had witnessed event_2 (Kevin reorganizes the shared drive and moves all reports to a new 'Archive' folder.), Rachel would likely interpret Kevin's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN019_T1",
+    "scenario_id": "SCN_019",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Nathan has witnessed, what does Nathan believe about the proposal status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Nathan has no opinion about it",
+      "B": "retracted",
+      "C": "Nathan does not know",
+      "D": "submitted to client"
+    },
+    "correct_answer": "B",
+    "explanation": "Nathan only witnessed event_1, event_2. They did not witness event_3. Therefore, Nathan believes the proposal status is: retracted.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN019_T2",
+    "scenario_id": "SCN_019",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Nathan think Priya believes about the proposal status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "retracted",
+      "B": "Priya has never encountered the proposal status",
+      "C": "submitted to client",
+      "D": "Nathan thinks Priya doesn't know about the proposal status"
+    },
+    "correct_answer": "A",
+    "explanation": "Nathan knows that Priya was present for event_1. From Nathan's perspective, Priya's belief would be: retracted. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN019_T3",
+    "scenario_id": "SCN_019",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Nathan had witnessed event_3, what would Nathan most likely think about Priya's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Priya was acting with hidden intent",
+      "B": "Priya was trying to help or organize",
+      "C": "Priya was confused or mistaken",
+      "D": "Priya was unaware of the consequences"
+    },
+    "correct_answer": "A",
+    "explanation": "Counterfactually, if Nathan had witnessed event_3 (Priya emails the client a follow-up referencing the submitted proposal.), Nathan would likely interpret Priya's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN020_T1",
+    "scenario_id": "SCN_020",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Samira has witnessed, what does Samira believe about the prototype location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Lab Room 1",
+      "B": "Samira does not know",
+      "C": "Samira has no opinion about it",
+      "D": "Lab Room 3"
+    },
+    "correct_answer": "D",
+    "explanation": "Samira only witnessed event_1, event_3. They did not witness event_2. Therefore, Samira believes the prototype location is: Lab Room 3.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN020_T2",
+    "scenario_id": "SCN_020",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Samira think Brett believes about the prototype location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Samira thinks Brett doesn't know about the prototype location",
+      "B": "Brett has never encountered the prototype location",
+      "C": "Lab Room 1",
+      "D": "Lab Room 3"
+    },
+    "correct_answer": "D",
+    "explanation": "Samira knows that Brett was present for event_1. From Samira's perspective, Brett's belief would be: Lab Room 3. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN020_T3",
+    "scenario_id": "SCN_020",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Samira had witnessed event_2, what would Samira most likely think about Brett's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Brett was unaware of the consequences",
+      "B": "Brett was acting with hidden intent",
+      "C": "Brett was confused or mistaken",
+      "D": "Brett was trying to help or organize"
+    },
+    "correct_answer": "B",
+    "explanation": "Counterfactually, if Samira had witnessed event_2 (Brett moves the prototype to Lab Room 1 for testing.), Samira would likely interpret Brett's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN021_T1",
+    "scenario_id": "SCN_021",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Derek has witnessed, what does Derek believe about the meeting time?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "2 PM",
+      "B": "Derek does not know",
+      "C": "Derek has no opinion about it",
+      "D": "3 PM"
+    },
+    "correct_answer": "D",
+    "explanation": "Derek only witnessed event_1, event_2. They did not witness event_3. Therefore, Derek believes the meeting time is: 3 PM.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN021_T2",
+    "scenario_id": "SCN_021",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Derek think Fiona believes about the meeting time?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Fiona has never encountered the meeting time",
+      "B": "Derek thinks Fiona doesn't know about the meeting time",
+      "C": "3 PM",
+      "D": "2 PM"
+    },
+    "correct_answer": "C",
+    "explanation": "Derek knows that Fiona was present for event_1, event_2. From Derek's perspective, Fiona's belief would be: 3 PM. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN021_T3",
+    "scenario_id": "SCN_021",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Derek had witnessed event_3, what would Derek most likely think about Fiona's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Fiona was trying to help or organize",
+      "B": "Fiona was unaware of the consequences",
+      "C": "Fiona was acting with hidden intent",
+      "D": "Fiona was confused or mistaken"
+    },
+    "correct_answer": "C",
+    "explanation": "Counterfactually, if Derek had witnessed event_3 (Raj heads to Conference Room A at 1:55 PM.), Derek would likely interpret Fiona's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN022_T1",
+    "scenario_id": "SCN_022",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Monica has witnessed, what does Monica believe about the files location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "filing cabinet",
+      "B": "filing cabinet (from assistant's guess)",
+      "C": "Monica does not know",
+      "D": "digital archive room"
+    },
+    "correct_answer": "A",
+    "explanation": "Monica only witnessed event_1, event_4. They did not witness event_2, event_3. Therefore, Monica believes the files location is: filing cabinet.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN022_T2",
+    "scenario_id": "SCN_022",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Monica think Steve believes about the files location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Monica thinks Steve doesn't know about the files location",
+      "B": "filing cabinet",
+      "C": "digital archive room",
+      "D": "filing cabinet (from assistant's guess)"
+    },
+    "correct_answer": "B",
+    "explanation": "Monica knows that Steve was present for some events. From Monica's perspective, Steve's belief would be: filing cabinet. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN022_T3",
+    "scenario_id": "SCN_022",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Monica had witnessed event_2, what would Monica most likely think about Steve's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Steve was confused or mistaken",
+      "B": "Steve was trying to help or organize",
+      "C": "Steve was acting with hidden intent",
+      "D": "Steve was unaware of the consequences"
+    },
+    "correct_answer": "C",
+    "explanation": "Counterfactually, if Monica had witnessed event_2 (Steve asks Monica's assistant where the files are; the assistant guesses the filing cabinet.), Monica would likely interpret Steve's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN023_T1",
+    "scenario_id": "SCN_023",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Yuki has witnessed, what does Yuki believe about the launch date?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "March",
+      "B": "Yuki does not know",
+      "C": "April",
+      "D": "Yuki has no opinion about it"
+    },
+    "correct_answer": "C",
+    "explanation": "Yuki only witnessed event_1, event_2. They did not witness event_3. Therefore, Yuki believes the launch date is: April.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN023_T2",
+    "scenario_id": "SCN_023",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Yuki think Andre believes about the launch date?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Andre has never encountered the launch date",
+      "B": "March",
+      "C": "Yuki thinks Andre doesn't know about the launch date",
+      "D": "April"
+    },
+    "correct_answer": "D",
+    "explanation": "Yuki knows that Andre was present for event_1. From Yuki's perspective, Andre's belief would be: April. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN023_T3",
+    "scenario_id": "SCN_023",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Yuki had witnessed event_3, what would Yuki most likely think about Andre's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Andre was acting with hidden intent",
+      "B": "Andre was unaware of the consequences",
+      "C": "Andre was trying to help or organize",
+      "D": "Andre was confused or mistaken"
+    },
+    "correct_answer": "A",
+    "explanation": "Counterfactually, if Yuki had witnessed event_3 (Petra overhears Andre excitedly telling a colleague about the March launch.), Yuki would likely interpret Andre's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN024_T1",
+    "scenario_id": "SCN_024",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Glenn has witnessed, what does Glenn believe about the email status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "accidentally sent to team",
+      "B": "saved as draft",
+      "C": "intentionally sent by Glenn",
+      "D": "Glenn does not know"
+    },
+    "correct_answer": "B",
+    "explanation": "Glenn only witnessed event_1. They did not witness event_2, event_3. Therefore, Glenn believes the email status is: saved as draft.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN024_T2",
+    "scenario_id": "SCN_024",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Glenn think Rita believes about the email status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "intentionally sent by Glenn",
+      "B": "accidentally sent to team",
+      "C": "Glenn thinks Rita doesn't know about the email status",
+      "D": "saved as draft"
+    },
+    "correct_answer": "D",
+    "explanation": "Glenn knows that Rita was present for some events. From Glenn's perspective, Rita's belief would be: saved as draft. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN024_T3",
+    "scenario_id": "SCN_024",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Glenn had witnessed event_2, what would Glenn most likely think about Rita's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Rita was trying to help or organize",
+      "B": "Rita was unaware of the consequences",
+      "C": "Rita was acting with hidden intent",
+      "D": "Rita was confused or mistaken"
+    },
+    "correct_answer": "C",
+    "explanation": "Counterfactually, if Glenn had witnessed event_2 (Rita accidentally sends Glenn's draft email to the entire team.), Glenn would likely interpret Rita's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN025_T1",
+    "scenario_id": "SCN_025",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Holly has witnessed, what does Holly believe about the laptop status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "locked (saw it locked)",
+      "B": "Holly does not know",
+      "C": "unlocked with data on screen",
+      "D": "locked (he locked it)"
+    },
+    "correct_answer": "C",
+    "explanation": "Holly only witnessed event_1, event_4. They did not witness event_2, event_3. Therefore, Holly believes the laptop status is: unlocked with data on screen.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN025_T2",
+    "scenario_id": "SCN_025",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Holly think Ivan believes about the laptop status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "locked (saw it locked)",
+      "B": "unlocked with data on screen",
+      "C": "Holly thinks Ivan doesn't know about the laptop status",
+      "D": "locked (he locked it)"
+    },
+    "correct_answer": "B",
+    "explanation": "Holly knows that Ivan was present for some events. From Holly's perspective, Ivan's belief would be: unlocked with data on screen. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN025_T3",
+    "scenario_id": "SCN_025",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Holly had witnessed event_2, what would Holly most likely think about Ivan's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Ivan was unaware of the consequences",
+      "B": "Ivan was acting with hidden intent",
+      "C": "Ivan was trying to help or organize",
+      "D": "Ivan was confused or mistaken"
+    },
+    "correct_answer": "B",
+    "explanation": "Counterfactually, if Holly had witnessed event_2 (Ivan walks in, sees the data, and locks the laptop.), Holly would likely interpret Ivan's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN026_T1",
+    "scenario_id": "SCN_026",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Vera has witnessed, what does Vera believe about the badge location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Vera's top drawer (was told by Marcus)",
+      "B": "Vera does not know",
+      "C": "his own drawer (lied to Lena)",
+      "D": "her top drawer"
+    },
+    "correct_answer": "D",
+    "explanation": "Vera only witnessed event_1. They did not witness event_2, event_3. Therefore, Vera believes the badge location is: her top drawer.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN026_T2",
+    "scenario_id": "SCN_026",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Vera think Marcus believes about the badge location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "his own drawer (lied to Lena)",
+      "B": "Vera thinks Marcus doesn't know about the badge location",
+      "C": "Vera's top drawer (was told by Marcus)",
+      "D": "her top drawer"
+    },
+    "correct_answer": "D",
+    "explanation": "Vera knows that Marcus was present for event_1. From Vera's perspective, Marcus's belief would be: her top drawer. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN026_T3",
+    "scenario_id": "SCN_026",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Vera had witnessed event_2, what would Vera most likely think about Marcus's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Marcus was trying to help or organize",
+      "B": "Marcus was confused or mistaken",
+      "C": "Marcus was unaware of the consequences",
+      "D": "Marcus was acting with hidden intent"
+    },
+    "correct_answer": "D",
+    "explanation": "Counterfactually, if Vera had witnessed event_2 (Marcus borrows the badge and puts it in his own desk drawer after using it.), Vera would likely interpret Marcus's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN027_T1",
+    "scenario_id": "SCN_027",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Brandon has witnessed, what does Brandon believe about the code status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "still has bug",
+      "B": "Brandon does not know",
+      "C": "ready for deployment",
+      "D": "Brandon has no opinion about it"
+    },
+    "correct_answer": "A",
+    "explanation": "Brandon only witnessed event_1, event_2. They did not witness event_3. Therefore, Brandon believes the code status is: still has bug.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN027_T2",
+    "scenario_id": "SCN_027",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Brandon think Suki believes about the code status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Brandon thinks Suki doesn't know about the code status",
+      "B": "still has bug",
+      "C": "Suki has never encountered the code status",
+      "D": "ready for deployment"
+    },
+    "correct_answer": "B",
+    "explanation": "Brandon knows that Suki was present for event_1. From Brandon's perspective, Suki's belief would be: still has bug. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN027_T3",
+    "scenario_id": "SCN_027",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Brandon had witnessed event_3, what would Brandon most likely think about Suki's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Suki was confused or mistaken",
+      "B": "Suki was acting with hidden intent",
+      "C": "Suki was unaware of the consequences",
+      "D": "Suki was trying to help or organize"
+    },
+    "correct_answer": "B",
+    "explanation": "Counterfactually, if Brandon had witnessed event_3 (Suki tells Earl the code is ready for deployment.), Brandon would likely interpret Suki's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN028_T1",
+    "scenario_id": "SCN_028",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Dina has witnessed, what does Dina believe about the terrace friday?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "booked for team celebration",
+      "B": "double-booked, conflict exists",
+      "C": "booked for client dinner",
+      "D": "Dina does not know"
+    },
+    "correct_answer": "A",
+    "explanation": "Dina only witnessed event_1. They did not witness event_2, event_3. Therefore, Dina believes the terrace friday is: booked for team celebration.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN028_T2",
+    "scenario_id": "SCN_028",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Dina think George believes about the terrace friday?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "booked for team celebration",
+      "B": "Dina thinks George doesn't know about the terrace friday",
+      "C": "booked for client dinner",
+      "D": "double-booked, conflict exists"
+    },
+    "correct_answer": "A",
+    "explanation": "Dina knows that George was present for some events. From Dina's perspective, George's belief would be: booked for team celebration. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN028_T3",
+    "scenario_id": "SCN_028",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Dina had witnessed event_2, what would Dina most likely think about George's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "George was confused or mistaken",
+      "B": "George was unaware of the consequences",
+      "C": "George was acting with hidden intent",
+      "D": "George was trying to help or organize"
+    },
+    "correct_answer": "C",
+    "explanation": "Counterfactually, if Dina had witnessed event_2 (George reserves the same terrace for a client dinner on Friday, unaware of Dina's booking.), Dina would likely interpret George's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN029_T1",
+    "scenario_id": "SCN_029",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Louise has witnessed, what does Louise believe about the envelope location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Louise does not know",
+      "B": "office safe",
+      "C": "Hank's desk",
+      "D": "recycling bin"
+    },
+    "correct_answer": "C",
+    "explanation": "Louise only witnessed event_1. They did not witness event_2, event_3. Therefore, Louise believes the envelope location is: Hank's desk.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN029_T2",
+    "scenario_id": "SCN_029",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Louise think Hank believes about the envelope location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "recycling bin",
+      "B": "Louise thinks Hank doesn't know about the envelope location",
+      "C": "Hank's desk",
+      "D": "office safe"
+    },
+    "correct_answer": "C",
+    "explanation": "Louise knows that Hank was present for some events. From Louise's perspective, Hank's belief would be: Hank's desk. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN029_T3",
+    "scenario_id": "SCN_029",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Louise had witnessed event_2, what would Louise most likely think about Hank's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Hank was trying to help or organize",
+      "B": "Hank was acting with hidden intent",
+      "C": "Hank was confused or mistaken",
+      "D": "Hank was unaware of the consequences"
+    },
+    "correct_answer": "B",
+    "explanation": "Counterfactually, if Louise had witnessed event_2 (Hank thinks the envelope is junk mail and throws it in the recycling bin.), Louise would likely interpret Hank's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN030_T1",
+    "scenario_id": "SCN_030",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Todd has witnessed, what does Todd believe about the application status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "applying",
+      "B": "Todd has no opinion about it",
+      "C": "Todd does not know",
+      "D": "not applying"
+    },
+    "correct_answer": "D",
+    "explanation": "Todd only witnessed event_1, event_2, event_3. Therefore, Todd believes the application status is: not applying.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN030_T2",
+    "scenario_id": "SCN_030",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Todd think Miriam believes about the application status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Miriam has never encountered the application status",
+      "B": "Todd thinks Miriam doesn't know about the application status",
+      "C": "not applying",
+      "D": "applying"
+    },
+    "correct_answer": "C",
+    "explanation": "Todd knows that Miriam was present for event_1, event_3. From Todd's perspective, Miriam's belief would be: not applying. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN030_T3",
+    "scenario_id": "SCN_030",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Todd had witnessed event_3, what would Todd most likely think about Miriam's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Miriam was confused or mistaken",
+      "B": "Miriam was acting with hidden intent",
+      "C": "Miriam was unaware of the consequences",
+      "D": "Miriam was trying to help or organize"
+    },
+    "correct_answer": "B",
+    "explanation": "Counterfactually, if Todd had witnessed event_3 (Miriam congratulates Todd on applying in front of the whole team.), Todd would likely interpret Miriam's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN031_T1",
+    "scenario_id": "SCN_031",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Kira has witnessed, what does Kira believe about the usb location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Kira does not know",
+      "B": "AV cabinet",
+      "C": "not in AV cabinet, unknown",
+      "D": "his desk"
+    },
+    "correct_answer": "B",
+    "explanation": "Kira only witnessed event_1. They did not witness event_2, event_3. Therefore, Kira believes the usb location is: AV cabinet.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN031_T2",
+    "scenario_id": "SCN_031",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Kira think Walt believes about the usb location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Kira thinks Walt doesn't know about the usb location",
+      "B": "not in AV cabinet, unknown",
+      "C": "his desk",
+      "D": "AV cabinet"
+    },
+    "correct_answer": "D",
+    "explanation": "Kira knows that Walt was present for event_1. From Kira's perspective, Walt's belief would be: AV cabinet. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN031_T3",
+    "scenario_id": "SCN_031",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Kira had witnessed event_2, what would Kira most likely think about Walt's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Walt was unaware of the consequences",
+      "B": "Walt was trying to help or organize",
+      "C": "Walt was acting with hidden intent",
+      "D": "Walt was confused or mistaken"
+    },
+    "correct_answer": "C",
+    "explanation": "Counterfactually, if Kira had witnessed event_2 (Walt takes the USB drive to update the files at his desk.), Kira would likely interpret Walt's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN032_T1",
+    "scenario_id": "SCN_032",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Frank has witnessed, what does Frank believe about the deal status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "client needs more time",
+      "B": "Frank does not know",
+      "C": "Frank has no opinion about it",
+      "D": "deal confirmed"
+    },
+    "correct_answer": "A",
+    "explanation": "Frank only witnessed event_1, event_2. They did not witness event_3. Therefore, Frank believes the deal status is: client needs more time.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN032_T2",
+    "scenario_id": "SCN_032",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Frank think Lila believes about the deal status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "client needs more time",
+      "B": "Lila has never encountered the deal status",
+      "C": "Frank thinks Lila doesn't know about the deal status",
+      "D": "deal confirmed"
+    },
+    "correct_answer": "A",
+    "explanation": "Frank knows that Lila was present for event_1. From Frank's perspective, Lila's belief would be: client needs more time. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN032_T3",
+    "scenario_id": "SCN_032",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Frank had witnessed event_3, what would Frank most likely think about Lila's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Lila was confused or mistaken",
+      "B": "Lila was acting with hidden intent",
+      "C": "Lila was trying to help or organize",
+      "D": "Lila was unaware of the consequences"
+    },
+    "correct_answer": "B",
+    "explanation": "Counterfactually, if Frank had witnessed event_3 (Lila tells Omar the deal is confirmed, based on what Frank told her.), Frank would likely interpret Lila's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN033_T1",
+    "scenario_id": "SCN_033",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Tessa has witnessed, what does Tessa believe about the box location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "dumpster area (saw Nolan move it, knows it's samples)",
+      "B": "Tessa does not know",
+      "C": "dumpster area (thinks it's trash)",
+      "D": "shipping dock"
+    },
+    "correct_answer": "D",
+    "explanation": "Tessa only witnessed event_1. They did not witness event_2, event_3. Therefore, Tessa believes the box location is: shipping dock.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN033_T2",
+    "scenario_id": "SCN_033",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Tessa think Nolan believes about the box location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "dumpster area (thinks it's trash)",
+      "B": "Tessa thinks Nolan doesn't know about the box location",
+      "C": "dumpster area (saw Nolan move it, knows it's samples)",
+      "D": "shipping dock"
+    },
+    "correct_answer": "D",
+    "explanation": "Tessa knows that Nolan was present for some events. From Tessa's perspective, Nolan's belief would be: shipping dock. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN033_T3",
+    "scenario_id": "SCN_033",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Tessa had witnessed event_2, what would Tessa most likely think about Nolan's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Nolan was unaware of the consequences",
+      "B": "Nolan was trying to help or organize",
+      "C": "Nolan was acting with hidden intent",
+      "D": "Nolan was confused or mistaken"
+    },
+    "correct_answer": "C",
+    "explanation": "Counterfactually, if Tessa had witnessed event_2 (Nolan sees an unlabeled box at the dock and assumes it's trash, moving it to the dumpster area.), Tessa would likely interpret Nolan's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN034_T1",
+    "scenario_id": "SCN_034",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Elise has witnessed, what does Elise believe about the lunch status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "someone ate Elise's lunch",
+      "B": "he ate his own lunch",
+      "C": "Elise does not know",
+      "D": "in the fridge"
+    },
+    "correct_answer": "D",
+    "explanation": "Elise only witnessed event_1. They did not witness event_2, event_3. Therefore, Elise believes the lunch status is: in the fridge.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN034_T2",
+    "scenario_id": "SCN_034",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Elise think Jared believes about the lunch status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Elise thinks Jared doesn't know about the lunch status",
+      "B": "he ate his own lunch",
+      "C": "in the fridge",
+      "D": "someone ate Elise's lunch"
+    },
+    "correct_answer": "C",
+    "explanation": "Elise knows that Jared was present for some events. From Elise's perspective, Jared's belief would be: in the fridge. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN034_T3",
+    "scenario_id": "SCN_034",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Elise had witnessed event_2, what would Elise most likely think about Jared's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Jared was trying to help or organize",
+      "B": "Jared was acting with hidden intent",
+      "C": "Jared was unaware of the consequences",
+      "D": "Jared was confused or mistaken"
+    },
+    "correct_answer": "B",
+    "explanation": "Counterfactually, if Elise had witnessed event_2 (Jared accidentally eats Elise's lunch, thinking it's the one he brought.), Elise would likely interpret Jared's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN035_T1",
+    "scenario_id": "SCN_035",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Cora has witnessed, what does Cora believe about the surprise status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Dana doesn't know (Dana pretended)",
+      "B": "Dana doesn't know",
+      "C": "Cora does not know",
+      "D": "knows about party, is pretending not to"
+    },
+    "correct_answer": "B",
+    "explanation": "Cora only witnessed event_1. They did not witness event_2, event_3. Therefore, Cora believes the surprise status is: Dana doesn't know.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN035_T2",
+    "scenario_id": "SCN_035",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Cora think Miles believes about the surprise status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "knows about party, is pretending not to",
+      "B": "Dana doesn't know",
+      "C": "Cora thinks Miles doesn't know about the surprise status",
+      "D": "Dana doesn't know (Dana pretended)"
+    },
+    "correct_answer": "B",
+    "explanation": "Cora knows that Miles was present for event_1. From Cora's perspective, Miles's belief would be: Dana doesn't know. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN035_T3",
+    "scenario_id": "SCN_035",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Cora had witnessed event_2, what would Cora most likely think about Miles's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Miles was trying to help or organize",
+      "B": "Miles was unaware of the consequences",
+      "C": "Miles was confused or mistaken",
+      "D": "Miles was acting with hidden intent"
+    },
+    "correct_answer": "D",
+    "explanation": "Counterfactually, if Cora had witnessed event_2 (Dana overhears Cora on the phone mentioning a party on Saturday.), Cora would likely interpret Miles's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN036_T1",
+    "scenario_id": "SCN_036",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Victor has witnessed, what does Victor believe about the car location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Victor does not know",
+      "B": "Lot B",
+      "C": "uncertain — conflicting evidence from event 2 and 3",
+      "D": "Lot B (based on what he told Alice)"
+    },
+    "correct_answer": "B",
+    "explanation": "Victor only witnessed event_1. They did not witness event_2, event_3. Therefore, Victor believes the car location is: Lot B.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN036_T2",
+    "scenario_id": "SCN_036",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Victor think Alice believes about the car location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Victor thinks Alice doesn't know about the car location",
+      "B": "uncertain — conflicting evidence from event 2 and 3",
+      "C": "Lot B",
+      "D": "Lot B (based on what he told Alice)"
+    },
+    "correct_answer": "C",
+    "explanation": "Victor knows that Alice was present for some events. From Victor's perspective, Alice's belief would be: Lot B. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN036_T3",
+    "scenario_id": "SCN_036",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Victor had witnessed event_2, what would Victor most likely think about Alice's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Alice was confused or mistaken",
+      "B": "Alice was acting with hidden intent",
+      "C": "Alice was trying to help or organize",
+      "D": "Alice was unaware of the consequences"
+    },
+    "correct_answer": "B",
+    "explanation": "Counterfactually, if Victor had witnessed event_2 (Alice sees a car identical to Victor's in Lot A and assumes that's where Victor parked.), Victor would likely interpret Alice's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN037_T1",
+    "scenario_id": "SCN_037",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Gwen has witnessed, what does Gwen believe about the jacket location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Gwen does not know",
+      "B": "in his hands",
+      "C": "no jacket on bench",
+      "D": "park bench"
+    },
+    "correct_answer": "D",
+    "explanation": "Gwen only witnessed event_1. They did not witness event_2, event_3. Therefore, Gwen believes the jacket location is: park bench.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN037_T2",
+    "scenario_id": "SCN_037",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Gwen think Patrick believes about the jacket location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "in his hands",
+      "B": "Gwen thinks Patrick doesn't know about the jacket location",
+      "C": "park bench",
+      "D": "no jacket on bench"
+    },
+    "correct_answer": "C",
+    "explanation": "Gwen knows that Patrick was present for event_1. From Gwen's perspective, Patrick's belief would be: park bench. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN037_T3",
+    "scenario_id": "SCN_037",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Gwen had witnessed event_2, what would Gwen most likely think about Patrick's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Patrick was unaware of the consequences",
+      "B": "Patrick was trying to help or organize",
+      "C": "Patrick was acting with hidden intent",
+      "D": "Patrick was confused or mistaken"
+    },
+    "correct_answer": "C",
+    "explanation": "Counterfactually, if Gwen had witnessed event_2 (Patrick picks up the jacket to return it to Gwen but gets distracted talking to a friend.), Gwen would likely interpret Patrick's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN038_T1",
+    "scenario_id": "SCN_038",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Troy has witnessed, what does Troy believe about the acceptance status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "retracted",
+      "B": "Troy has no opinion about it",
+      "C": "Troy does not know",
+      "D": "accepted"
+    },
+    "correct_answer": "A",
+    "explanation": "Troy only witnessed event_1, event_2. They did not witness event_3. Therefore, Troy believes the acceptance status is: retracted.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN038_T2",
+    "scenario_id": "SCN_038",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Troy think Carmen believes about the acceptance status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "accepted",
+      "B": "retracted",
+      "C": "Troy thinks Carmen doesn't know about the acceptance status",
+      "D": "Carmen has never encountered the acceptance status"
+    },
+    "correct_answer": "B",
+    "explanation": "Troy knows that Carmen was present for event_1. From Troy's perspective, Carmen's belief would be: retracted. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN038_T3",
+    "scenario_id": "SCN_038",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Troy had witnessed event_3, what would Troy most likely think about Carmen's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Carmen was trying to help or organize",
+      "B": "Carmen was confused or mistaken",
+      "C": "Carmen was unaware of the consequences",
+      "D": "Carmen was acting with hidden intent"
+    },
+    "correct_answer": "D",
+    "explanation": "Counterfactually, if Troy had witnessed event_3 (Carmen excitedly tells Leo that Troy got into medical school.), Troy would likely interpret Carmen's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN039_T1",
+    "scenario_id": "SCN_039",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Naomi has witnessed, what does Naomi believe about the meeting location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Café Sol, thinks Elliot also knows",
+      "B": "Naomi does not know",
+      "C": "Café Luna",
+      "D": "Café Sol"
+    },
+    "correct_answer": "D",
+    "explanation": "Naomi only witnessed event_1, event_2. They did not witness event_3. Therefore, Naomi believes the meeting location is: Café Sol.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN039_T2",
+    "scenario_id": "SCN_039",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Naomi think Elliot believes about the meeting location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Café Luna",
+      "B": "Café Sol, thinks Elliot also knows",
+      "C": "Café Sol",
+      "D": "Naomi thinks Elliot doesn't know about the meeting location"
+    },
+    "correct_answer": "C",
+    "explanation": "Naomi knows that Elliot was present for event_1. From Naomi's perspective, Elliot's belief would be: Café Sol. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN039_T3",
+    "scenario_id": "SCN_039",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Naomi had witnessed event_3, what would Naomi most likely think about Elliot's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Elliot was unaware of the consequences",
+      "B": "Elliot was acting with hidden intent",
+      "C": "Elliot was trying to help or organize",
+      "D": "Elliot was confused or mistaken"
+    },
+    "correct_answer": "B",
+    "explanation": "Counterfactually, if Naomi had witnessed event_3 (Jade assumes Elliot also knows about the change.), Naomi would likely interpret Elliot's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN040_T1",
+    "scenario_id": "SCN_040",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Drew has witnessed, what does Drew believe about the geocache location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "community garden",
+      "B": "Drew does not know",
+      "C": "behind library fountain",
+      "D": "behind library fountain (told by Drew)"
+    },
+    "correct_answer": "C",
+    "explanation": "Drew only witnessed event_1, event_3. They did not witness event_2. Therefore, Drew believes the geocache location is: behind library fountain.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN040_T2",
+    "scenario_id": "SCN_040",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Drew think Kaye believes about the geocache location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Drew thinks Kaye doesn't know about the geocache location",
+      "B": "behind library fountain (told by Drew)",
+      "C": "community garden",
+      "D": "behind library fountain"
+    },
+    "correct_answer": "D",
+    "explanation": "Drew knows that Kaye was present for some events. From Drew's perspective, Kaye's belief would be: behind library fountain. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN040_T3",
+    "scenario_id": "SCN_040",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Drew had witnessed event_2, what would Drew most likely think about Kaye's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Kaye was unaware of the consequences",
+      "B": "Kaye was confused or mistaken",
+      "C": "Kaye was acting with hidden intent",
+      "D": "Kaye was trying to help or organize"
+    },
+    "correct_answer": "C",
+    "explanation": "Counterfactually, if Drew had witnessed event_2 (Kaye finds the geocache and moves it to the community garden as a joke.), Drew would likely interpret Kaye's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN041_T1",
+    "scenario_id": "SCN_041",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Ruth has witnessed, what does Ruth believe about the cake location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Ruth does not know",
+      "B": "main table",
+      "C": "Ruth has no opinion about it",
+      "D": "shaded table"
+    },
+    "correct_answer": "B",
+    "explanation": "Ruth only witnessed event_1. They did not witness event_2, event_3. Therefore, Ruth believes the cake location is: main table.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN041_T2",
+    "scenario_id": "SCN_041",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Ruth think Kyle believes about the cake location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "main table",
+      "B": "Kyle has never encountered the cake location",
+      "C": "Ruth thinks Kyle doesn't know about the cake location",
+      "D": "shaded table"
+    },
+    "correct_answer": "A",
+    "explanation": "Ruth knows that Kyle was present for event_1. From Ruth's perspective, Kyle's belief would be: main table. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN041_T3",
+    "scenario_id": "SCN_041",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Ruth had witnessed event_2, what would Ruth most likely think about Kyle's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Kyle was trying to help or organize",
+      "B": "Kyle was acting with hidden intent",
+      "C": "Kyle was confused or mistaken",
+      "D": "Kyle was unaware of the consequences"
+    },
+    "correct_answer": "B",
+    "explanation": "Counterfactually, if Ruth had witnessed event_2 (Kyle moves the cake to a shaded table to prevent melting, while Ruth is playing frisbee.), Ruth would likely interpret Kyle's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN042_T1",
+    "scenario_id": "SCN_042",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Luca has witnessed, what does Luca believe about the concert time?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "9 PM",
+      "B": "Luca has no opinion about it",
+      "C": "8 PM",
+      "D": "Luca does not know"
+    },
+    "correct_answer": "C",
+    "explanation": "Luca only witnessed event_1. They did not witness event_2, event_3. Therefore, Luca believes the concert time is: 8 PM.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN042_T2",
+    "scenario_id": "SCN_042",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Luca think Wren believes about the concert time?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Luca thinks Wren doesn't know about the concert time",
+      "B": "9 PM",
+      "C": "8 PM",
+      "D": "Wren has never encountered the concert time"
+    },
+    "correct_answer": "C",
+    "explanation": "Luca knows that Wren was present for event_1. From Luca's perspective, Wren's belief would be: 8 PM. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN042_T3",
+    "scenario_id": "SCN_042",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Luca had witnessed event_2, what would Luca most likely think about Wren's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Wren was confused or mistaken",
+      "B": "Wren was unaware of the consequences",
+      "C": "Wren was acting with hidden intent",
+      "D": "Wren was trying to help or organize"
+    },
+    "correct_answer": "C",
+    "explanation": "Counterfactually, if Luca had witnessed event_2 (The venue posts online that the concert is delayed to 9 PM. Only Dex sees the update.), Luca would likely interpret Wren's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN043_T1",
+    "scenario_id": "SCN_043",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Freya has witnessed, what does Freya believe about the lamp status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Freya does not know",
+      "B": "held for her at the stall",
+      "C": "purchased by him",
+      "D": "sold twice, there is a conflict"
+    },
+    "correct_answer": "B",
+    "explanation": "Freya only witnessed event_1. They did not witness event_2, event_3. Therefore, Freya believes the lamp status is: held for her at the stall.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN043_T2",
+    "scenario_id": "SCN_043",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Freya think Dante believes about the lamp status?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Freya thinks Dante doesn't know about the lamp status",
+      "B": "sold twice, there is a conflict",
+      "C": "held for her at the stall",
+      "D": "purchased by him"
+    },
+    "correct_answer": "C",
+    "explanation": "Freya knows that Dante was present for some events. From Freya's perspective, Dante's belief would be: held for her at the stall. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN043_T3",
+    "scenario_id": "SCN_043",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Freya had witnessed event_2, what would Freya most likely think about Dante's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Dante was acting with hidden intent",
+      "B": "Dante was confused or mistaken",
+      "C": "Dante was trying to help or organize",
+      "D": "Dante was unaware of the consequences"
+    },
+    "correct_answer": "A",
+    "explanation": "Counterfactually, if Freya had witnessed event_2 (Dante sees the same lamp and buys it, not knowing it was already sold.), Freya would likely interpret Dante's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN044_T1",
+    "scenario_id": "SCN_044",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Iris has witnessed, what does Iris believe about the envelope contents?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Iris does not know",
+      "B": "thank-you note",
+      "C": "movie tickets",
+      "D": "movie tickets (she put them in but told Blaine it was a note)"
+    },
+    "correct_answer": "D",
+    "explanation": "Iris only witnessed event_1, event_3. They did not witness event_2. Therefore, Iris believes the envelope contents is: movie tickets (she put them in but told Blaine it was a note).",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN044_T2",
+    "scenario_id": "SCN_044",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Iris think Noel believes about the envelope contents?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "movie tickets (she put them in but told Blaine it was a note)",
+      "B": "movie tickets",
+      "C": "thank-you note",
+      "D": "Iris thinks Noel doesn't know about the envelope contents"
+    },
+    "correct_answer": "A",
+    "explanation": "Iris knows that Noel was present for event_1. From Iris's perspective, Noel's belief would be: movie tickets (she put them in but told Blaine it was a note). This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN044_T3",
+    "scenario_id": "SCN_044",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Iris had witnessed event_2, what would Iris most likely think about Noel's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Noel was confused or mistaken",
+      "B": "Noel was trying to help or organize",
+      "C": "Noel was unaware of the consequences",
+      "D": "Noel was acting with hidden intent"
+    },
+    "correct_answer": "D",
+    "explanation": "Counterfactually, if Iris had witnessed event_2 (Noel opens the envelope privately and finds the tickets.), Iris would likely interpret Noel's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN045_T1",
+    "scenario_id": "SCN_045",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Piper has witnessed, what does Piper believe about the pipers vote?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Candidate Y",
+      "B": "Piper has no opinion about it",
+      "C": "Piper does not know",
+      "D": "Candidate X"
+    },
+    "correct_answer": "A",
+    "explanation": "Piper only witnessed event_1, event_2. They did not witness event_3. Therefore, Piper believes the pipers vote is: Candidate Y.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN045_T2",
+    "scenario_id": "SCN_045",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Piper think Reid believes about the pipers vote?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Piper thinks Reid doesn't know about the pipers vote",
+      "B": "Candidate X",
+      "C": "Reid has never encountered the pipers vote",
+      "D": "Candidate Y"
+    },
+    "correct_answer": "D",
+    "explanation": "Piper knows that Reid was present for event_1. From Piper's perspective, Reid's belief would be: Candidate Y. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN045_T3",
+    "scenario_id": "SCN_045",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Piper had witnessed event_3, what would Piper most likely think about Reid's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Reid was acting with hidden intent",
+      "B": "Reid was trying to help or organize",
+      "C": "Reid was unaware of the consequences",
+      "D": "Reid was confused or mistaken"
+    },
+    "correct_answer": "A",
+    "explanation": "Counterfactually, if Piper had witnessed event_3 (Reid tells other friends that Piper supports Candidate X.), Piper would likely interpret Reid's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN046_T1",
+    "scenario_id": "SCN_046",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Heath has witnessed, what does Heath believe about the backpack location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "picnic shelter",
+      "B": "under the tree",
+      "C": "picnic shelter (doesn't know whose it is)",
+      "D": "Heath does not know"
+    },
+    "correct_answer": "B",
+    "explanation": "Heath only witnessed event_1, event_4. They did not witness event_2, event_3. Therefore, Heath believes the backpack location is: under the tree.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN046_T2",
+    "scenario_id": "SCN_046",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Heath think Rosa believes about the backpack location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "picnic shelter",
+      "B": "under the tree",
+      "C": "picnic shelter (doesn't know whose it is)",
+      "D": "Heath thinks Rosa doesn't know about the backpack location"
+    },
+    "correct_answer": "B",
+    "explanation": "Heath knows that Rosa was present for event_1. From Heath's perspective, Rosa's belief would be: under the tree. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN046_T3",
+    "scenario_id": "SCN_046",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Heath had witnessed event_2, what would Heath most likely think about Rosa's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Rosa was unaware of the consequences",
+      "B": "Rosa was trying to help or organize",
+      "C": "Rosa was acting with hidden intent",
+      "D": "Rosa was confused or mistaken"
+    },
+    "correct_answer": "C",
+    "explanation": "Counterfactually, if Heath had witnessed event_2 (Rosa moves the backpack to the picnic shelter because it starts raining.), Heath would likely interpret Rosa's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN047_T1",
+    "scenario_id": "SCN_047",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Bryce has witnessed, what does Bryce believe about the book location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Bryce has it",
+      "B": "Bryce has no opinion about it",
+      "C": "Bryce does not know",
+      "D": "returned to library"
+    },
+    "correct_answer": "D",
+    "explanation": "Bryce only witnessed event_1, event_2. They did not witness event_3. Therefore, Bryce believes the book location is: returned to library.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN047_T2",
+    "scenario_id": "SCN_047",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Bryce think Tina believes about the book location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Tina has never encountered the book location",
+      "B": "returned to library",
+      "C": "Bryce has it",
+      "D": "Bryce thinks Tina doesn't know about the book location"
+    },
+    "correct_answer": "B",
+    "explanation": "Bryce knows that Tina was present for event_1. From Bryce's perspective, Tina's belief would be: returned to library. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN047_T3",
+    "scenario_id": "SCN_047",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Bryce had witnessed event_3, what would Bryce most likely think about Tina's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Tina was acting with hidden intent",
+      "B": "Tina was trying to help or organize",
+      "C": "Tina was unaware of the consequences",
+      "D": "Tina was confused or mistaken"
+    },
+    "correct_answer": "A",
+    "explanation": "Counterfactually, if Bryce had witnessed event_3 (Tina tells Malik that Bryce has the book if he wants to borrow it.), Bryce would likely interpret Tina's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN048_T1",
+    "scenario_id": "SCN_048",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Jess has witnessed, what does Jess believe about the proposal timing?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Jess has no opinion about it",
+      "B": "tonight",
+      "C": "Jess does not know",
+      "D": "tomorrow"
+    },
+    "correct_answer": "D",
+    "explanation": "Jess only witnessed event_1, event_2. They did not witness event_3. Therefore, Jess believes the proposal timing is: tomorrow.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN048_T2",
+    "scenario_id": "SCN_048",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Jess think Omar believes about the proposal timing?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "tomorrow",
+      "B": "tonight",
+      "C": "Omar has never encountered the proposal timing",
+      "D": "Jess thinks Omar doesn't know about the proposal timing"
+    },
+    "correct_answer": "A",
+    "explanation": "Jess knows that Omar was present for event_1. From Jess's perspective, Omar's belief would be: tomorrow. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN048_T3",
+    "scenario_id": "SCN_048",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Jess had witnessed event_3, what would Jess most likely think about Omar's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Omar was acting with hidden intent",
+      "B": "Omar was unaware of the consequences",
+      "C": "Omar was trying to help or organize",
+      "D": "Omar was confused or mistaken"
+    },
+    "correct_answer": "A",
+    "explanation": "Counterfactually, if Jess had witnessed event_3 (Omar buys flowers and heads to the restaurant to surprise them.), Jess would likely interpret Omar's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN049_T1",
+    "scenario_id": "SCN_049",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Leah has witnessed, what does Leah believe about the capsule location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "storage shed",
+      "B": "Leah does not know",
+      "C": "old oak tree",
+      "D": "old oak tree (went to find it)"
+    },
+    "correct_answer": "C",
+    "explanation": "Leah only witnessed event_1. They did not witness event_2, event_3. Therefore, Leah believes the capsule location is: old oak tree.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN049_T2",
+    "scenario_id": "SCN_049",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Leah think Finn believes about the capsule location?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "old oak tree (went to find it)",
+      "B": "old oak tree",
+      "C": "storage shed",
+      "D": "Leah thinks Finn doesn't know about the capsule location"
+    },
+    "correct_answer": "B",
+    "explanation": "Leah knows that Finn was present for event_1. From Leah's perspective, Finn's belief would be: old oak tree. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN049_T3",
+    "scenario_id": "SCN_049",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Leah had witnessed event_2, what would Leah most likely think about Finn's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Finn was unaware of the consequences",
+      "B": "Finn was acting with hidden intent",
+      "C": "Finn was trying to help or organize",
+      "D": "Finn was confused or mistaken"
+    },
+    "correct_answer": "B",
+    "explanation": "Counterfactually, if Leah had witnessed event_2 (The school groundskeeper removes the oak tree stump and the capsule is moved to the storage shed.), Leah would likely interpret Finn's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN050_T1",
+    "scenario_id": "SCN_050",
+    "variant": "original",
+    "tier": 1,
+    "tier_name": "first_order_tom",
+    "question_text": "Based on what Marco has witnessed, what does Marco believe about the volleyball source?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Marco does not know",
+      "B": "bought new one at shop",
+      "C": "Marco brought it from home as planned",
+      "D": "he brought Marco's original from home"
+    },
+    "correct_answer": "B",
+    "explanation": "Marco only witnessed event_1, event_2. They did not witness event_3, event_4. Therefore, Marco believes the volleyball source is: bought new one at shop.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN050_T2",
+    "scenario_id": "SCN_050",
+    "variant": "original",
+    "tier": 2,
+    "tier_name": "second_order_tom",
+    "question_text": "What does Marco think Hana believes about the volleyball source?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "bought new one at shop",
+      "B": "Marco brought it from home as planned",
+      "C": "he brought Marco's original from home",
+      "D": "Marco thinks Hana doesn't know about the volleyball source"
+    },
+    "correct_answer": "A",
+    "explanation": "Marco knows that Hana was present for event_1. From Marco's perspective, Hana's belief would be: bought new one at shop. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+    "requires_cot": true
+  },
+  {
+    "question_id": "Q_SCN050_T3",
+    "scenario_id": "SCN_050",
+    "variant": "original",
+    "tier": 3,
+    "tier_name": "counterfactual_tom",
+    "question_text": "If Marco had witnessed event_3, what would Marco most likely think about Hana's intention?",
+    "answer_type": "multiple_choice",
+    "choices": {
+      "A": "Hana was acting with hidden intent",
+      "B": "Hana was confused or mistaken",
+      "C": "Hana was trying to help or organize",
+      "D": "Hana was unaware of the consequences"
+    },
+    "correct_answer": "A",
+    "explanation": "Counterfactually, if Marco had witnessed event_3 (Zeke finds Marco's original volleyball at Marco's house and brings it to the beach.), Marco would likely interpret Hana's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+    "requires_cot": true
+  }
+]

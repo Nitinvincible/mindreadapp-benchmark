@@ -1,0 +1,710 @@
+[
+  {
+    "scenario_id": "SCN_001",
+    "setting": "domestic",
+    "characters": {"A": "Sara", "B": "Tom", "C": "Maya"},
+    "events": [
+      {"event_id": 1, "text": "Sara places her red notebook on the kitchen table.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Tom moves the notebook to the drawer while Sara is in the garden.", "witnessed_by": ["B", "C"]},
+      {"event_id": 3, "text": "Sara comes back inside without speaking to Tom or Maya.", "witnessed_by": ["A"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_3"], "B_knows": ["event_1", "event_2", "event_3"], "C_knows": ["event_2"]},
+    "ground_truth": {"A_believes_notebook_location": "kitchen table", "B_believes_notebook_location": "drawer", "C_believes_notebook_location": "drawer"},
+    "tags": ["object_location", "false_belief", "information_asymmetry"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_002",
+    "setting": "domestic",
+    "characters": {"A": "Liam", "B": "Nora", "C": "Jake"},
+    "events": [
+      {"event_id": 1, "text": "Liam hides a birthday gift for Jake inside the hallway closet.", "witnessed_by": ["A"]},
+      {"event_id": 2, "text": "Nora finds the gift while cleaning and moves it to the garage.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Jake overhears Nora telling a friend on the phone that she put something in the garage.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_gift_location": "hallway closet", "B_believes_gift_location": "garage", "C_believes_something_in_garage": "true but does not know it is a gift"},
+    "tags": ["object_location", "false_belief", "partial_information"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_003",
+    "setting": "domestic",
+    "characters": {"A": "Emma", "B": "Ryan", "C": "Zoe"},
+    "events": [
+      {"event_id": 1, "text": "Emma bakes cookies and leaves them on the counter to cool.", "witnessed_by": ["A", "B", "C"]},
+      {"event_id": 2, "text": "Ryan eats all the cookies while Emma is upstairs.", "witnessed_by": ["B", "C"]},
+      {"event_id": 3, "text": "Emma calls down from upstairs asking if the cookies have cooled.", "witnessed_by": ["A", "B", "C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_3"], "B_knows": ["event_1", "event_2", "event_3"], "C_knows": ["event_1", "event_2", "event_3"]},
+    "ground_truth": {"A_believes_cookies_status": "still on counter cooling", "B_believes_cookies_status": "eaten by himself", "C_believes_cookies_status": "eaten by Ryan"},
+    "tags": ["object_state", "false_belief", "information_asymmetry"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_004",
+    "setting": "domestic",
+    "characters": {"A": "Mia", "B": "David", "C": "Lily"},
+    "events": [
+      {"event_id": 1, "text": "Mia puts her phone on charge in the bedroom.", "witnessed_by": ["A"]},
+      {"event_id": 2, "text": "David takes Mia's phone to look up a recipe in the kitchen.", "witnessed_by": ["B", "C"]},
+      {"event_id": 3, "text": "Lily puts the phone back in the bedroom before Mia returns.", "witnessed_by": ["C"]},
+      {"event_id": 4, "text": "Mia comes back to the bedroom.", "witnessed_by": ["A"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_4"], "B_knows": ["event_2"], "C_knows": ["event_2", "event_3"], "D_knows": []},
+    "ground_truth": {"A_believes_phone_location": "bedroom (correct by coincidence)", "B_believes_phone_location": "kitchen", "C_believes_phone_location": "bedroom"},
+    "tags": ["object_location", "coincidental_true_belief", "multi_transfer"],
+    "difficulty": "hard"
+  },
+  {
+    "scenario_id": "SCN_005",
+    "setting": "domestic",
+    "characters": {"A": "Olivia", "B": "Ethan", "C": "Chloe"},
+    "events": [
+      {"event_id": 1, "text": "Olivia tells Ethan she is going to the grocery store.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "After Ethan leaves the room, Olivia changes her mind and decides to go to the pharmacy instead.", "witnessed_by": ["A", "C"]},
+      {"event_id": 3, "text": "Chloe does not tell Ethan about the change of plans.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2"], "B_knows": ["event_1"], "C_knows": ["event_2", "event_3"]},
+    "ground_truth": {"A_believes_destination": "pharmacy", "B_believes_destination": "grocery store", "C_believes_destination": "pharmacy"},
+    "tags": ["plan_change", "false_belief", "information_asymmetry"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_006",
+    "setting": "domestic",
+    "characters": {"A": "Noah", "B": "Ava", "C": "Lucas"},
+    "events": [
+      {"event_id": 1, "text": "Noah puts the TV remote on the coffee table.", "witnessed_by": ["A", "B", "C"]},
+      {"event_id": 2, "text": "Ava moves the remote to the bookshelf while Noah is in the bathroom.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Lucas, who was napping, wakes up and sees the remote on the bookshelf.", "witnessed_by": ["C"]},
+      {"event_id": 4, "text": "Noah returns from the bathroom.", "witnessed_by": ["A"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_4"], "B_knows": ["event_1", "event_2"], "C_knows": ["event_1", "event_3"]},
+    "ground_truth": {"A_believes_remote_location": "coffee table", "B_believes_remote_location": "bookshelf", "C_believes_remote_location": "bookshelf"},
+    "tags": ["object_location", "false_belief", "independent_discovery"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_007",
+    "setting": "domestic",
+    "characters": {"A": "Isabella", "B": "James", "C": "Sophie"},
+    "events": [
+      {"event_id": 1, "text": "Isabella wraps a present and hides it in the top of her wardrobe.", "witnessed_by": ["A"]},
+      {"event_id": 2, "text": "James sees Isabella going to the wardrobe and assumes she hid something there.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Sophie moves the present to under the bed when both Isabella and James are out.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_present_location": "top of wardrobe", "B_believes_present_location": "top of wardrobe", "C_believes_present_location": "under the bed"},
+    "tags": ["object_location", "inference_based_belief", "false_belief"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_008",
+    "setting": "domestic",
+    "characters": {"A": "Harper", "B": "Daniel", "C": "Grace"},
+    "events": [
+      {"event_id": 1, "text": "Harper tells Daniel and Grace that dinner will be at 7 PM.", "witnessed_by": ["A", "B", "C"]},
+      {"event_id": 2, "text": "Harper texts Daniel privately that dinner is moved to 8 PM.", "witnessed_by": ["A", "B"]},
+      {"event_id": 3, "text": "Grace asks Daniel what time dinner is, but Daniel is on the phone and doesn't hear her.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2"], "B_knows": ["event_1", "event_2"], "C_knows": ["event_1", "event_3"]},
+    "ground_truth": {"A_believes_dinner_time": "8 PM", "B_believes_dinner_time": "8 PM", "C_believes_dinner_time": "7 PM"},
+    "tags": ["schedule_change", "selective_communication", "information_asymmetry"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_009",
+    "setting": "domestic",
+    "characters": {"A": "Ella", "B": "Marcus", "C": "Freya"},
+    "events": [
+      {"event_id": 1, "text": "Ella puts her keys in the blue bowl by the front door.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Marcus accidentally knocks the bowl and the keys fall behind the shoe rack.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Freya finds the keys behind the shoe rack and puts them in her pocket.", "witnessed_by": ["C"]},
+      {"event_id": 4, "text": "Ella comes to the front door looking for her keys.", "witnessed_by": ["A"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_4"], "B_knows": ["event_1", "event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_keys_location": "blue bowl", "B_believes_keys_location": "behind shoe rack", "C_believes_keys_location": "her pocket"},
+    "tags": ["object_location", "chain_transfer", "false_belief"],
+    "difficulty": "hard"
+  },
+  {
+    "scenario_id": "SCN_010",
+    "setting": "domestic",
+    "characters": {"A": "Aiden", "B": "Clara", "C": "Finn"},
+    "events": [
+      {"event_id": 1, "text": "Aiden tells Clara he is feeling fine.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Aiden privately tells Finn he actually feels sick but doesn't want Clara to worry.", "witnessed_by": ["A", "C"]},
+      {"event_id": 3, "text": "Clara notices Aiden looks pale but doesn't say anything.", "witnessed_by": ["B"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2"], "B_knows": ["event_1", "event_3"], "C_knows": ["event_2"]},
+    "ground_truth": {"A_believes_about_own_health": "sick", "B_believes_about_A_health": "says fine but looks pale", "C_believes_about_A_health": "sick"},
+    "tags": ["deception", "emotional_state", "information_asymmetry"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_011",
+    "setting": "domestic",
+    "characters": {"A": "Penelope", "B": "Oscar", "C": "Iris"},
+    "events": [
+      {"event_id": 1, "text": "Penelope puts the cat's medicine in the top kitchen cabinet.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Oscar moves the medicine to the bathroom cabinet for safety, while Penelope is asleep.", "witnessed_by": ["B", "C"]},
+      {"event_id": 3, "text": "Penelope wakes up and goes to give the cat its medicine.", "witnessed_by": ["A"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_3"], "B_knows": ["event_1", "event_2"], "C_knows": ["event_2"]},
+    "ground_truth": {"A_believes_medicine_location": "top kitchen cabinet", "B_believes_medicine_location": "bathroom cabinet", "C_believes_medicine_location": "bathroom cabinet"},
+    "tags": ["object_location", "false_belief", "practical_scenario"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_012",
+    "setting": "domestic",
+    "characters": {"A": "Ruby", "B": "Felix", "C": "Hazel"},
+    "events": [
+      {"event_id": 1, "text": "Ruby hides Easter eggs in the garden, specifically near the rose bush.", "witnessed_by": ["A"]},
+      {"event_id": 2, "text": "Felix watches through the window and sees Ruby hiding eggs near the rose bush.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Hazel moves some eggs from the rose bush to the birdbath without anyone seeing.", "witnessed_by": ["C"]},
+      {"event_id": 4, "text": "Ruby announces it's time for the egg hunt.", "witnessed_by": ["A", "B", "C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_4"], "B_knows": ["event_2", "event_4"], "C_knows": ["event_3", "event_4"]},
+    "ground_truth": {"A_believes_eggs_location": "near rose bush", "B_believes_eggs_location": "near rose bush", "C_believes_eggs_location": "some near rose bush, some at birdbath"},
+    "tags": ["object_location", "secret_observation", "partial_move"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_013",
+    "setting": "domestic",
+    "characters": {"A": "Violet", "B": "Leo", "C": "Ivy"},
+    "events": [
+      {"event_id": 1, "text": "Violet puts a love letter for Leo inside a book on the living room shelf.", "witnessed_by": ["A"]},
+      {"event_id": 2, "text": "Ivy borrows the book without knowing the letter is inside.", "witnessed_by": ["C"]},
+      {"event_id": 3, "text": "Leo goes to the shelf to browse books and doesn't find the specific book.", "witnessed_by": ["B"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_3"], "C_knows": ["event_2"]},
+    "ground_truth": {"A_believes_letter_location": "inside book on shelf", "B_believes_book_status": "missing from shelf, doesn't know about letter", "C_believes_she_has": "a book, unaware of letter inside"},
+    "tags": ["hidden_object", "unknowing_transfer", "false_belief"],
+    "difficulty": "hard"
+  },
+  {
+    "scenario_id": "SCN_014",
+    "setting": "domestic",
+    "characters": {"A": "Theo", "B": "Luna", "C": "Max"},
+    "events": [
+      {"event_id": 1, "text": "Theo pours orange juice into a green pitcher and puts it in the fridge.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Luna drinks the last of the juice and refills the pitcher with lemonade.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Max sees the green pitcher in the fridge but wasn't present for any pouring.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_1", "event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_pitcher_contains": "orange juice", "B_believes_pitcher_contains": "lemonade", "C_believes_pitcher_contains": "unknown liquid"},
+    "tags": ["content_change", "false_belief", "appearance_vs_reality"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_015",
+    "setting": "domestic",
+    "characters": {"A": "Aria", "B": "Sam", "C": "Nina"},
+    "events": [
+      {"event_id": 1, "text": "Aria tells Sam she booked a table at the Italian restaurant for Saturday.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Aria calls the restaurant and changes the reservation to the French bistro, telling only Nina.", "witnessed_by": ["A", "C"]},
+      {"event_id": 3, "text": "Sam buys a bottle of Italian wine as a gift for the dinner.", "witnessed_by": ["B"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2"], "B_knows": ["event_1", "event_3"], "C_knows": ["event_2"]},
+    "ground_truth": {"A_believes_restaurant": "French bistro", "B_believes_restaurant": "Italian restaurant", "C_believes_restaurant": "French bistro"},
+    "tags": ["plan_change", "selective_update", "false_belief"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_016",
+    "setting": "domestic",
+    "characters": {"A": "Owen", "B": "Stella", "C": "Hugo"},
+    "events": [
+      {"event_id": 1, "text": "Owen leaves cash inside an envelope on the kitchen counter for the plumber.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Stella puts the envelope in her purse for safekeeping, intending to give it to the plumber herself.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Hugo, the plumber, arrives and looks at the kitchen counter.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_1", "event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_envelope_location": "kitchen counter", "B_believes_envelope_location": "her purse", "C_believes_envelope_status": "not on counter, no knowledge of envelope"},
+    "tags": ["object_location", "false_belief", "third_party_perspective"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_017",
+    "setting": "domestic",
+    "characters": {"A": "Caleb", "B": "Daisy", "C": "Jasper"},
+    "events": [
+      {"event_id": 1, "text": "Caleb plants sunflower seeds in the front garden bed and marks the spot with a small flag.", "witnessed_by": ["A", "C"]},
+      {"event_id": 2, "text": "Daisy removes the flag thinking it's litter, while Caleb is at work.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Jasper waters the marked spot in the garden, unaware the flag has been removed.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_2"], "C_knows": ["event_1", "event_3"]},
+    "ground_truth": {"A_believes_flag_status": "still marking the garden spot", "B_believes_flag_status": "thrown away as litter", "C_believes_flag_status": "still marking the spot (doesn't know it was removed)"},
+    "tags": ["object_state", "misunderstanding", "false_belief"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_018",
+    "setting": "workplace",
+    "characters": {"A": "Rachel", "B": "Kevin", "C": "Diana"},
+    "events": [
+      {"event_id": 1, "text": "Rachel saves the quarterly report on the shared drive in the 'Q3 Reports' folder.", "witnessed_by": ["A"]},
+      {"event_id": 2, "text": "Kevin reorganizes the shared drive and moves all reports to a new 'Archive' folder.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Diana asks Rachel where the quarterly report is.", "witnessed_by": ["A", "C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_3"], "B_knows": ["event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_report_location": "Q3 Reports folder", "B_believes_report_location": "Archive folder", "C_believes_report_location": "unknown, is asking"},
+    "tags": ["file_location", "false_belief", "workplace_organization"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_019",
+    "setting": "workplace",
+    "characters": {"A": "Nathan", "B": "Priya", "C": "Carlos"},
+    "events": [
+      {"event_id": 1, "text": "Nathan tells Priya he submitted the project proposal to the client.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Nathan realizes there was an error and retracts the email, telling only Carlos.", "witnessed_by": ["A", "C"]},
+      {"event_id": 3, "text": "Priya emails the client a follow-up referencing the submitted proposal.", "witnessed_by": ["B"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2"], "B_knows": ["event_1", "event_3"], "C_knows": ["event_2"]},
+    "ground_truth": {"A_believes_proposal_status": "retracted", "B_believes_proposal_status": "submitted to client", "C_believes_proposal_status": "retracted"},
+    "tags": ["status_change", "selective_communication", "workplace_error"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_020",
+    "setting": "workplace",
+    "characters": {"A": "Samira", "B": "Brett", "C": "Wendy"},
+    "events": [
+      {"event_id": 1, "text": "Samira leaves the prototype in Lab Room 3.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Brett moves the prototype to Lab Room 1 for testing.", "witnessed_by": ["B", "C"]},
+      {"event_id": 3, "text": "Samira returns to Lab Room 3 to continue working on the prototype.", "witnessed_by": ["A"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_3"], "B_knows": ["event_1", "event_2"], "C_knows": ["event_2"]},
+    "ground_truth": {"A_believes_prototype_location": "Lab Room 3", "B_believes_prototype_location": "Lab Room 1", "C_believes_prototype_location": "Lab Room 1"},
+    "tags": ["object_location", "false_belief", "workplace_lab"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_021",
+    "setting": "workplace",
+    "characters": {"A": "Derek", "B": "Fiona", "C": "Raj"},
+    "events": [
+      {"event_id": 1, "text": "Derek schedules a team meeting for 2 PM in Conference Room A.", "witnessed_by": ["A", "B", "C"]},
+      {"event_id": 2, "text": "Derek changes the meeting to 3 PM and updates the calendar, but the notification only reaches Fiona.", "witnessed_by": ["A", "B"]},
+      {"event_id": 3, "text": "Raj heads to Conference Room A at 1:55 PM.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2"], "B_knows": ["event_1", "event_2"], "C_knows": ["event_1", "event_3"]},
+    "ground_truth": {"A_believes_meeting_time": "3 PM", "B_believes_meeting_time": "3 PM", "C_believes_meeting_time": "2 PM"},
+    "tags": ["schedule_change", "notification_failure", "false_belief"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_022",
+    "setting": "workplace",
+    "characters": {"A": "Monica", "B": "Steve", "C": "Tara"},
+    "events": [
+      {"event_id": 1, "text": "Monica puts the client files in the locked filing cabinet.", "witnessed_by": ["A"]},
+      {"event_id": 2, "text": "Steve asks Monica's assistant where the files are; the assistant guesses the filing cabinet.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Tara, the office manager, moves all filing cabinet contents to the digital archive room.", "witnessed_by": ["C"]},
+      {"event_id": 4, "text": "Monica returns to her office the next morning.", "witnessed_by": ["A"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_4"], "B_knows": ["event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_files_location": "filing cabinet", "B_believes_files_location": "filing cabinet (from assistant's guess)", "C_believes_files_location": "digital archive room"},
+    "tags": ["object_location", "secondhand_information", "organizational_change"],
+    "difficulty": "hard"
+  },
+  {
+    "scenario_id": "SCN_023",
+    "setting": "workplace",
+    "characters": {"A": "Yuki", "B": "Andre", "C": "Petra"},
+    "events": [
+      {"event_id": 1, "text": "Yuki tells Andre that the product launch is confirmed for March.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "The CEO privately informs Yuki the launch is delayed to April.", "witnessed_by": ["A"]},
+      {"event_id": 3, "text": "Petra overhears Andre excitedly telling a colleague about the March launch.", "witnessed_by": ["B", "C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2"], "B_knows": ["event_1", "event_3"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_launch_date": "April", "B_believes_launch_date": "March", "C_believes_launch_date": "March"},
+    "tags": ["schedule_change", "information_cascade", "false_belief"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_024",
+    "setting": "workplace",
+    "characters": {"A": "Glenn", "B": "Rita", "C": "Simon"},
+    "events": [
+      {"event_id": 1, "text": "Glenn writes a critical email about the project manager and saves it as a draft.", "witnessed_by": ["A"]},
+      {"event_id": 2, "text": "Rita accidentally sends Glenn's draft email to the entire team.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Simon reads the email and assumes Glenn sent it intentionally.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_email_status": "saved as draft", "B_believes_email_status": "accidentally sent to team", "C_believes_email_status": "intentionally sent by Glenn"},
+    "tags": ["communication_error", "false_belief", "attribution_error"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_025",
+    "setting": "workplace",
+    "characters": {"A": "Holly", "B": "Ivan", "C": "Nadia"},
+    "events": [
+      {"event_id": 1, "text": "Holly leaves her laptop unlocked with confidential data on screen in the meeting room.", "witnessed_by": ["A"]},
+      {"event_id": 2, "text": "Ivan walks in, sees the data, and locks the laptop.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Nadia later sits at the meeting room table and sees the locked laptop.", "witnessed_by": ["C"]},
+      {"event_id": 4, "text": "Holly returns to the meeting room.", "witnessed_by": ["A"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_4"], "B_knows": ["event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_laptop_status": "unlocked with data on screen", "B_believes_laptop_status": "locked (he locked it)", "C_believes_laptop_status": "locked (saw it locked)"},
+    "tags": ["device_state", "helpful_intervention", "false_belief"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_026",
+    "setting": "workplace",
+    "characters": {"A": "Vera", "B": "Marcus", "C": "Lena"},
+    "events": [
+      {"event_id": 1, "text": "Vera puts the access badge for the server room in the top drawer of her desk.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Marcus borrows the badge and puts it in his own desk drawer after using it.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Lena asks Marcus where the server room badge is; Marcus says it's in Vera's top drawer.", "witnessed_by": ["B", "C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_1", "event_2", "event_3"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_badge_location": "her top drawer", "B_believes_badge_location": "his own drawer (lied to Lena)", "C_believes_badge_location": "Vera's top drawer (was told by Marcus)"},
+    "tags": ["deception", "object_location", "deliberate_misinformation"],
+    "difficulty": "hard"
+  },
+  {
+    "scenario_id": "SCN_027",
+    "setting": "workplace",
+    "characters": {"A": "Brandon", "B": "Suki", "C": "Earl"},
+    "events": [
+      {"event_id": 1, "text": "Brandon tells Suki he finished debugging the code.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Brandon privately discovers another bug but doesn't tell anyone.", "witnessed_by": ["A"]},
+      {"event_id": 3, "text": "Suki tells Earl the code is ready for deployment.", "witnessed_by": ["B", "C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2"], "B_knows": ["event_1", "event_3"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_code_status": "still has bug", "B_believes_code_status": "ready for deployment", "C_believes_code_status": "ready for deployment"},
+    "tags": ["status_misrepresentation", "information_cascade", "false_belief"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_028",
+    "setting": "workplace",
+    "characters": {"A": "Dina", "B": "George", "C": "Pam"},
+    "events": [
+      {"event_id": 1, "text": "Dina books the rooftop terrace for a team celebration on Friday.", "witnessed_by": ["A"]},
+      {"event_id": 2, "text": "George reserves the same terrace for a client dinner on Friday, unaware of Dina's booking.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Pam sees both bookings in the system and knows there's a conflict.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_terrace_friday": "booked for team celebration", "B_believes_terrace_friday": "booked for client dinner", "C_believes_terrace_friday": "double-booked, conflict exists"},
+    "tags": ["scheduling_conflict", "mutual_ignorance", "third_party_awareness"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_029",
+    "setting": "workplace",
+    "characters": {"A": "Louise", "B": "Hank", "C": "Zara"},
+    "events": [
+      {"event_id": 1, "text": "Louise puts confidential salary data in a sealed envelope on Hank's desk.", "witnessed_by": ["A"]},
+      {"event_id": 2, "text": "Hank thinks the envelope is junk mail and throws it in the recycling bin.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Zara retrieves the envelope from recycling, sees the confidential stamp, and puts it in the office safe.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_envelope_location": "Hank's desk", "B_believes_envelope_location": "recycling bin", "C_believes_envelope_location": "office safe"},
+    "tags": ["object_location", "chain_transfer", "misidentification"],
+    "difficulty": "hard"
+  },
+  {
+    "scenario_id": "SCN_030",
+    "setting": "workplace",
+    "characters": {"A": "Todd", "B": "Miriam", "C": "Jessie"},
+    "events": [
+      {"event_id": 1, "text": "Todd tells Miriam he's applying for the senior manager position.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Todd decides not to apply after reading the job requirements, but only tells Jessie.", "witnessed_by": ["A", "C"]},
+      {"event_id": 3, "text": "Miriam congratulates Todd on applying in front of the whole team.", "witnessed_by": ["A", "B"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2", "event_3"], "B_knows": ["event_1", "event_3"], "C_knows": ["event_2"]},
+    "ground_truth": {"A_believes_application_status": "not applying", "B_believes_application_status": "applying", "C_believes_application_status": "not applying"},
+    "tags": ["plan_change", "social_awkwardness", "false_belief"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_031",
+    "setting": "workplace",
+    "characters": {"A": "Kira", "B": "Walt", "C": "Opal"},
+    "events": [
+      {"event_id": 1, "text": "Kira stores the USB drive with presentation files in the conference room AV cabinet.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Walt takes the USB drive to update the files at his desk.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Opal needs the presentation and checks the AV cabinet.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_1", "event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_usb_location": "AV cabinet", "B_believes_usb_location": "his desk", "C_believes_usb_location": "not in AV cabinet, unknown"},
+    "tags": ["object_location", "false_belief", "workplace_tech"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_032",
+    "setting": "workplace",
+    "characters": {"A": "Frank", "B": "Lila", "C": "Omar"},
+    "events": [
+      {"event_id": 1, "text": "Frank tells Lila the client loved the pitch and wants to proceed.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "The client calls Frank privately and says they need more time to decide.", "witnessed_by": ["A"]},
+      {"event_id": 3, "text": "Lila tells Omar the deal is confirmed, based on what Frank told her.", "witnessed_by": ["B", "C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2"], "B_knows": ["event_1", "event_3"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_deal_status": "client needs more time", "B_believes_deal_status": "deal confirmed", "C_believes_deal_status": "deal confirmed"},
+    "tags": ["status_change", "information_cascade", "outdated_belief"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_033",
+    "setting": "workplace",
+    "characters": {"A": "Tessa", "B": "Nolan", "C": "Bianca"},
+    "events": [
+      {"event_id": 1, "text": "Tessa labels a box of product samples and puts it by the shipping dock.", "witnessed_by": ["A", "C"]},
+      {"event_id": 2, "text": "Nolan sees an unlabeled box at the dock and assumes it's trash, moving it to the dumpster area.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Bianca witnesses Nolan moving the box but doesn't intervene.", "witnessed_by": ["B", "C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_2", "event_3"], "C_knows": ["event_1", "event_3"]},
+    "ground_truth": {"A_believes_box_location": "shipping dock", "B_believes_box_location": "dumpster area (thinks it's trash)", "C_believes_box_location": "dumpster area (saw Nolan move it, knows it's samples)"},
+    "tags": ["object_location", "misidentification", "bystander_knowledge"],
+    "difficulty": "hard"
+  },
+  {
+    "scenario_id": "SCN_034",
+    "setting": "workplace",
+    "characters": {"A": "Elise", "B": "Jared", "C": "Mei"},
+    "events": [
+      {"event_id": 1, "text": "Elise puts her lunch in the office fridge with her name on it.", "witnessed_by": ["A"]},
+      {"event_id": 2, "text": "Jared accidentally eats Elise's lunch, thinking it's the one he brought.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Mei sees the empty container with Elise's name on it in the trash.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_lunch_status": "in the fridge", "B_believes_lunch_status": "he ate his own lunch", "C_believes_lunch_status": "someone ate Elise's lunch"},
+    "tags": ["object_state", "accidental_action", "evidence_based_inference"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_035",
+    "setting": "social",
+    "characters": {"A": "Cora", "B": "Miles", "C": "Dana"},
+    "events": [
+      {"event_id": 1, "text": "Cora tells Miles she's throwing a surprise party for Dana on Saturday.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Dana overhears Cora on the phone mentioning a party on Saturday.", "witnessed_by": ["C"]},
+      {"event_id": 3, "text": "Dana pretends she doesn't know about any party when talking to Miles.", "witnessed_by": ["B", "C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_1", "event_3"], "C_knows": ["event_2", "event_3"]},
+    "ground_truth": {"A_believes_surprise_status": "Dana doesn't know", "B_believes_surprise_status": "Dana doesn't know (Dana pretended)", "C_believes_surprise_status": "knows about party, is pretending not to"},
+    "tags": ["social_deception", "surprise_party", "meta_deception"],
+    "difficulty": "hard"
+  },
+  {
+    "scenario_id": "SCN_036",
+    "setting": "social",
+    "characters": {"A": "Victor", "B": "Alice", "C": "Reuben"},
+    "events": [
+      {"event_id": 1, "text": "Victor parks his car in Lot B at the shopping mall.", "witnessed_by": ["A"]},
+      {"event_id": 2, "text": "Alice sees a car identical to Victor's in Lot A and assumes that's where Victor parked.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Reuben tells Alice he saw Victor walking from Lot B.", "witnessed_by": ["B", "C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_2", "event_3"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_car_location": "Lot B", "B_believes_car_location": "uncertain — conflicting evidence from event 2 and 3", "C_believes_car_location": "Lot B (based on what he told Alice)"},
+    "tags": ["object_location", "conflicting_evidence", "social_testimony"],
+    "difficulty": "hard"
+  },
+  {
+    "scenario_id": "SCN_037",
+    "setting": "social",
+    "characters": {"A": "Gwen", "B": "Patrick", "C": "Sasha"},
+    "events": [
+      {"event_id": 1, "text": "Gwen leaves her jacket on a park bench and walks to the ice cream stand.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Patrick picks up the jacket to return it to Gwen but gets distracted talking to a friend.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Sasha sits on the bench and doesn't see any jacket.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_1", "event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_jacket_location": "park bench", "B_believes_jacket_location": "in his hands", "C_believes_jacket_status": "no jacket on bench"},
+    "tags": ["object_location", "interrupted_action", "false_belief"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_038",
+    "setting": "social",
+    "characters": {"A": "Troy", "B": "Carmen", "C": "Leo"},
+    "events": [
+      {"event_id": 1, "text": "Troy tells Carmen he got accepted to medical school.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Troy receives a follow-up email retracting the acceptance due to an administrative error.", "witnessed_by": ["A"]},
+      {"event_id": 3, "text": "Carmen excitedly tells Leo that Troy got into medical school.", "witnessed_by": ["B", "C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2"], "B_knows": ["event_1", "event_3"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_acceptance_status": "retracted", "B_believes_acceptance_status": "accepted", "C_believes_acceptance_status": "accepted"},
+    "tags": ["status_change", "information_cascade", "outdated_belief"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_039",
+    "setting": "social",
+    "characters": {"A": "Naomi", "B": "Elliot", "C": "Jade"},
+    "events": [
+      {"event_id": 1, "text": "Naomi tells Elliot she'll meet him at Café Luna at 5 PM.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Naomi texts Jade that she changed the meeting spot to Café Sol.", "witnessed_by": ["A", "C"]},
+      {"event_id": 3, "text": "Jade assumes Elliot also knows about the change.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2"], "B_knows": ["event_1"], "C_knows": ["event_2", "event_3"]},
+    "ground_truth": {"A_believes_meeting_location": "Café Sol", "B_believes_meeting_location": "Café Luna", "C_believes_meeting_location": "Café Sol, thinks Elliot also knows"},
+    "tags": ["location_change", "assumption_error", "false_belief"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_040",
+    "setting": "social",
+    "characters": {"A": "Drew", "B": "Kaye", "C": "Milo"},
+    "events": [
+      {"event_id": 1, "text": "Drew hides a geocache behind the library fountain.", "witnessed_by": ["A"]},
+      {"event_id": 2, "text": "Kaye finds the geocache and moves it to the community garden as a joke.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Milo asks Drew where the geocache is, and Drew gives the original location.", "witnessed_by": ["A", "C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_3"], "B_knows": ["event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_geocache_location": "behind library fountain", "B_believes_geocache_location": "community garden", "C_believes_geocache_location": "behind library fountain (told by Drew)"},
+    "tags": ["object_location", "prank", "outdated_belief"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_041",
+    "setting": "social",
+    "characters": {"A": "Ruth", "B": "Kyle", "C": "Nia"},
+    "events": [
+      {"event_id": 1, "text": "Ruth brings a homemade cake to the picnic and sets it on the main table.", "witnessed_by": ["A", "B", "C"]},
+      {"event_id": 2, "text": "Kyle moves the cake to a shaded table to prevent melting, while Ruth is playing frisbee.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Nia tells a latecomer the cake is on the main table.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_1", "event_2"], "C_knows": ["event_1", "event_3"]},
+    "ground_truth": {"A_believes_cake_location": "main table", "B_believes_cake_location": "shaded table", "C_believes_cake_location": "main table"},
+    "tags": ["object_location", "helpful_move", "outdated_belief"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_042",
+    "setting": "social",
+    "characters": {"A": "Luca", "B": "Wren", "C": "Dex"},
+    "events": [
+      {"event_id": 1, "text": "Luca tells Wren that the concert starts at 8 PM.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "The venue posts online that the concert is delayed to 9 PM. Only Dex sees the update.", "witnessed_by": ["C"]},
+      {"event_id": 3, "text": "Wren tells Dex to meet at the venue by 7:30 PM.", "witnessed_by": ["B", "C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_1", "event_3"], "C_knows": ["event_2", "event_3"]},
+    "ground_truth": {"A_believes_concert_time": "8 PM", "B_believes_concert_time": "8 PM", "C_believes_concert_time": "9 PM"},
+    "tags": ["schedule_change", "external_update", "information_asymmetry"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_043",
+    "setting": "social",
+    "characters": {"A": "Freya", "B": "Dante", "C": "Sage"},
+    "events": [
+      {"event_id": 1, "text": "Freya buys a vintage lamp at a flea market stall and asks the vendor to hold it.", "witnessed_by": ["A"]},
+      {"event_id": 2, "text": "Dante sees the same lamp and buys it, not knowing it was already sold.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Sage overhears the vendor complaining about selling the lamp twice.", "witnessed_by": ["C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_lamp_status": "held for her at the stall", "B_believes_lamp_status": "purchased by him", "C_believes_lamp_status": "sold twice, there is a conflict"},
+    "tags": ["ownership_conflict", "mutual_ignorance", "third_party_awareness"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_044",
+    "setting": "social",
+    "characters": {"A": "Iris", "B": "Noel", "C": "Blaine"},
+    "events": [
+      {"event_id": 1, "text": "Iris gives Noel a sealed envelope containing two movie tickets.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Noel opens the envelope privately and finds the tickets.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Blaine asks Iris what was in the envelope, and Iris says it was a thank-you note.", "witnessed_by": ["A", "C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_3"], "B_knows": ["event_1", "event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_envelope_contents": "movie tickets (she put them in but told Blaine it was a note)", "B_believes_envelope_contents": "movie tickets", "C_believes_envelope_contents": "thank-you note"},
+    "tags": ["deception", "hidden_content", "deliberate_misinformation"],
+    "difficulty": "hard"
+  },
+  {
+    "scenario_id": "SCN_045",
+    "setting": "social",
+    "characters": {"A": "Piper", "B": "Reid", "C": "June"},
+    "events": [
+      {"event_id": 1, "text": "Piper tells Reid she voted for Candidate X in the school election.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Piper tells June she actually voted for Candidate Y and lied to Reid.", "witnessed_by": ["A", "C"]},
+      {"event_id": 3, "text": "Reid tells other friends that Piper supports Candidate X.", "witnessed_by": ["B"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2"], "B_knows": ["event_1", "event_3"], "C_knows": ["event_2"]},
+    "ground_truth": {"A_believes_pipers_vote": "Candidate Y", "B_believes_pipers_vote": "Candidate X", "C_believes_pipers_vote": "Candidate Y"},
+    "tags": ["deception", "social_lying", "selective_truth"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_046",
+    "setting": "social",
+    "characters": {"A": "Heath", "B": "Rosa", "C": "Quinn"},
+    "events": [
+      {"event_id": 1, "text": "Heath leaves his backpack under a tree at the park before joining a soccer game.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Rosa moves the backpack to the picnic shelter because it starts raining.", "witnessed_by": ["B"]},
+      {"event_id": 3, "text": "Quinn arrives at the park and sees a backpack in the picnic shelter.", "witnessed_by": ["C"]},
+      {"event_id": 4, "text": "The rain stops and Heath walks back to the tree.", "witnessed_by": ["A"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_4"], "B_knows": ["event_1", "event_2"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_backpack_location": "under the tree", "B_believes_backpack_location": "picnic shelter", "C_believes_backpack_location": "picnic shelter (doesn't know whose it is)"},
+    "tags": ["object_location", "weather_trigger", "false_belief"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_047",
+    "setting": "social",
+    "characters": {"A": "Bryce", "B": "Tina", "C": "Malik"},
+    "events": [
+      {"event_id": 1, "text": "Bryce borrows a book from the community library and tells Tina about it.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Bryce returns the book early without telling anyone.", "witnessed_by": ["A"]},
+      {"event_id": 3, "text": "Tina tells Malik that Bryce has the book if he wants to borrow it.", "witnessed_by": ["B", "C"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2"], "B_knows": ["event_1", "event_3"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_book_location": "returned to library", "B_believes_book_location": "Bryce has it", "C_believes_book_location": "Bryce has it"},
+    "tags": ["object_location", "outdated_information", "information_cascade"],
+    "difficulty": "easy"
+  },
+  {
+    "scenario_id": "SCN_048",
+    "setting": "social",
+    "characters": {"A": "Jess", "B": "Omar", "C": "Vera"},
+    "events": [
+      {"event_id": 1, "text": "Jess tells Omar she's planning to propose to her girlfriend at the restaurant tonight.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Jess's girlfriend calls and reschedules dinner to tomorrow, which only Jess and Vera hear.", "witnessed_by": ["A", "C"]},
+      {"event_id": 3, "text": "Omar buys flowers and heads to the restaurant to surprise them.", "witnessed_by": ["B"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2"], "B_knows": ["event_1", "event_3"], "C_knows": ["event_2"]},
+    "ground_truth": {"A_believes_proposal_timing": "tomorrow", "B_believes_proposal_timing": "tonight", "C_believes_dinner_timing": "tomorrow"},
+    "tags": ["plan_change", "outdated_belief", "wasted_effort"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_049",
+    "setting": "social",
+    "characters": {"A": "Leah", "B": "Finn", "C": "Clara"},
+    "events": [
+      {"event_id": 1, "text": "Leah hides a time capsule in the old oak tree at the school playground.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "The school groundskeeper removes the oak tree stump and the capsule is moved to the storage shed.", "witnessed_by": ["C"]},
+      {"event_id": 3, "text": "Finn visits the playground years later to dig up the capsule.", "witnessed_by": ["B"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1"], "B_knows": ["event_1", "event_3"], "C_knows": ["event_2"]},
+    "ground_truth": {"A_believes_capsule_location": "old oak tree", "B_believes_capsule_location": "old oak tree (went to find it)", "C_believes_capsule_location": "storage shed"},
+    "tags": ["object_location", "environmental_change", "outdated_belief"],
+    "difficulty": "medium"
+  },
+  {
+    "scenario_id": "SCN_050",
+    "setting": "social",
+    "characters": {"A": "Marco", "B": "Hana", "C": "Zeke"},
+    "events": [
+      {"event_id": 1, "text": "Marco tells Hana he'll bring the volleyball to the beach.", "witnessed_by": ["A", "B"]},
+      {"event_id": 2, "text": "Marco realizes he forgot the volleyball at home and buys a new one at a shop near the beach.", "witnessed_by": ["A"]},
+      {"event_id": 3, "text": "Zeke finds Marco's original volleyball at Marco's house and brings it to the beach.", "witnessed_by": ["C"]},
+      {"event_id": 4, "text": "Hana arrives at the beach.", "witnessed_by": ["B"]}
+    ],
+    "belief_state_map": {"A_knows": ["event_1", "event_2"], "B_knows": ["event_1", "event_4"], "C_knows": ["event_3"]},
+    "ground_truth": {"A_believes_volleyball_source": "bought new one at shop", "B_believes_volleyball_source": "Marco brought it from home as planned", "C_believes_volleyball_source": "he brought Marco's original from home"},
+    "tags": ["object_identity", "parallel_actions", "multiple_versions"],
+    "difficulty": "hard"
+  }
+]

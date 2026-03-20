@@ -1,0 +1,2791 @@
+{
+  "description": "10-scenario sample of MindRead++ benchmark for quick inspection",
+  "scenarios": [
+    {
+      "scenario_id": "SCN_001",
+      "setting": "domestic",
+      "characters": {
+        "A": "Sara",
+        "B": "Tom",
+        "C": "Maya"
+      },
+      "events": [
+        {
+          "event_id": 1,
+          "text": "Sara places her red notebook on the kitchen table.",
+          "witnessed_by": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "event_id": 2,
+          "text": "Tom moves the notebook to the drawer while Sara is in the garden.",
+          "witnessed_by": [
+            "B",
+            "C"
+          ]
+        },
+        {
+          "event_id": 3,
+          "text": "Sara comes back inside without speaking to Tom or Maya.",
+          "witnessed_by": [
+            "A"
+          ]
+        }
+      ],
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_2"
+        ]
+      },
+      "ground_truth": {
+        "A_believes_notebook_location": "kitchen table",
+        "B_believes_notebook_location": "drawer",
+        "C_believes_notebook_location": "drawer"
+      },
+      "tags": [
+        "object_location",
+        "false_belief",
+        "information_asymmetry"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "scenario_id": "SCN_002",
+      "setting": "domestic",
+      "characters": {
+        "A": "Liam",
+        "B": "Nora",
+        "C": "Jake"
+      },
+      "events": [
+        {
+          "event_id": 1,
+          "text": "Liam hides a birthday gift for Jake inside the hallway closet.",
+          "witnessed_by": [
+            "A"
+          ]
+        },
+        {
+          "event_id": 2,
+          "text": "Nora finds the gift while cleaning and moves it to the garage.",
+          "witnessed_by": [
+            "B"
+          ]
+        },
+        {
+          "event_id": 3,
+          "text": "Jake overhears Nora telling a friend on the phone that she put something in the garage.",
+          "witnessed_by": [
+            "C"
+          ]
+        }
+      ],
+      "belief_state_map": {
+        "A_knows": [
+          "event_1"
+        ],
+        "B_knows": [
+          "event_2"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "ground_truth": {
+        "A_believes_gift_location": "hallway closet",
+        "B_believes_gift_location": "garage",
+        "C_believes_something_in_garage": "true but does not know it is a gift"
+      },
+      "tags": [
+        "object_location",
+        "false_belief",
+        "partial_information"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "scenario_id": "SCN_003",
+      "setting": "domestic",
+      "characters": {
+        "A": "Emma",
+        "B": "Ryan",
+        "C": "Zoe"
+      },
+      "events": [
+        {
+          "event_id": 1,
+          "text": "Emma bakes cookies and leaves them on the counter to cool.",
+          "witnessed_by": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "event_id": 2,
+          "text": "Ryan eats all the cookies while Emma is upstairs.",
+          "witnessed_by": [
+            "B",
+            "C"
+          ]
+        },
+        {
+          "event_id": 3,
+          "text": "Emma calls down from upstairs asking if the cookies have cooled.",
+          "witnessed_by": [
+            "A",
+            "B",
+            "C"
+          ]
+        }
+      ],
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ]
+      },
+      "ground_truth": {
+        "A_believes_cookies_status": "still on counter cooling",
+        "B_believes_cookies_status": "eaten by himself",
+        "C_believes_cookies_status": "eaten by Ryan"
+      },
+      "tags": [
+        "object_state",
+        "false_belief",
+        "information_asymmetry"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "scenario_id": "SCN_004",
+      "setting": "domestic",
+      "characters": {
+        "A": "Mia",
+        "B": "David",
+        "C": "Lily"
+      },
+      "events": [
+        {
+          "event_id": 1,
+          "text": "Mia puts her phone on charge in the bedroom.",
+          "witnessed_by": [
+            "A"
+          ]
+        },
+        {
+          "event_id": 2,
+          "text": "David takes Mia's phone to look up a recipe in the kitchen.",
+          "witnessed_by": [
+            "B",
+            "C"
+          ]
+        },
+        {
+          "event_id": 3,
+          "text": "Lily puts the phone back in the bedroom before Mia returns.",
+          "witnessed_by": [
+            "C"
+          ]
+        },
+        {
+          "event_id": 4,
+          "text": "Mia comes back to the bedroom.",
+          "witnessed_by": [
+            "A"
+          ]
+        }
+      ],
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "B_knows": [
+          "event_2"
+        ],
+        "C_knows": [
+          "event_2",
+          "event_3"
+        ],
+        "D_knows": []
+      },
+      "ground_truth": {
+        "A_believes_phone_location": "bedroom (correct by coincidence)",
+        "B_believes_phone_location": "kitchen",
+        "C_believes_phone_location": "bedroom"
+      },
+      "tags": [
+        "object_location",
+        "coincidental_true_belief",
+        "multi_transfer"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "scenario_id": "SCN_005",
+      "setting": "domestic",
+      "characters": {
+        "A": "Olivia",
+        "B": "Ethan",
+        "C": "Chloe"
+      },
+      "events": [
+        {
+          "event_id": 1,
+          "text": "Olivia tells Ethan she is going to the grocery store.",
+          "witnessed_by": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "event_id": 2,
+          "text": "After Ethan leaves the room, Olivia changes her mind and decides to go to the pharmacy instead.",
+          "witnessed_by": [
+            "A",
+            "C"
+          ]
+        },
+        {
+          "event_id": 3,
+          "text": "Chloe does not tell Ethan about the change of plans.",
+          "witnessed_by": [
+            "C"
+          ]
+        }
+      ],
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1"
+        ],
+        "C_knows": [
+          "event_2",
+          "event_3"
+        ]
+      },
+      "ground_truth": {
+        "A_believes_destination": "pharmacy",
+        "B_believes_destination": "grocery store",
+        "C_believes_destination": "pharmacy"
+      },
+      "tags": [
+        "plan_change",
+        "false_belief",
+        "information_asymmetry"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "scenario_id": "SCN_006",
+      "setting": "domestic",
+      "characters": {
+        "A": "Noah",
+        "B": "Ava",
+        "C": "Lucas"
+      },
+      "events": [
+        {
+          "event_id": 1,
+          "text": "Noah puts the TV remote on the coffee table.",
+          "witnessed_by": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "event_id": 2,
+          "text": "Ava moves the remote to the bookshelf while Noah is in the bathroom.",
+          "witnessed_by": [
+            "B"
+          ]
+        },
+        {
+          "event_id": 3,
+          "text": "Lucas, who was napping, wakes up and sees the remote on the bookshelf.",
+          "witnessed_by": [
+            "C"
+          ]
+        },
+        {
+          "event_id": 4,
+          "text": "Noah returns from the bathroom.",
+          "witnessed_by": [
+            "A"
+          ]
+        }
+      ],
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_3"
+        ]
+      },
+      "ground_truth": {
+        "A_believes_remote_location": "coffee table",
+        "B_believes_remote_location": "bookshelf",
+        "C_believes_remote_location": "bookshelf"
+      },
+      "tags": [
+        "object_location",
+        "false_belief",
+        "independent_discovery"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "scenario_id": "SCN_007",
+      "setting": "domestic",
+      "characters": {
+        "A": "Isabella",
+        "B": "James",
+        "C": "Sophie"
+      },
+      "events": [
+        {
+          "event_id": 1,
+          "text": "Isabella wraps a present and hides it in the top of her wardrobe.",
+          "witnessed_by": [
+            "A"
+          ]
+        },
+        {
+          "event_id": 2,
+          "text": "James sees Isabella going to the wardrobe and assumes she hid something there.",
+          "witnessed_by": [
+            "B"
+          ]
+        },
+        {
+          "event_id": 3,
+          "text": "Sophie moves the present to under the bed when both Isabella and James are out.",
+          "witnessed_by": [
+            "C"
+          ]
+        }
+      ],
+      "belief_state_map": {
+        "A_knows": [
+          "event_1"
+        ],
+        "B_knows": [
+          "event_2"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "ground_truth": {
+        "A_believes_present_location": "top of wardrobe",
+        "B_believes_present_location": "top of wardrobe",
+        "C_believes_present_location": "under the bed"
+      },
+      "tags": [
+        "object_location",
+        "inference_based_belief",
+        "false_belief"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "scenario_id": "SCN_008",
+      "setting": "domestic",
+      "characters": {
+        "A": "Harper",
+        "B": "Daniel",
+        "C": "Grace"
+      },
+      "events": [
+        {
+          "event_id": 1,
+          "text": "Harper tells Daniel and Grace that dinner will be at 7 PM.",
+          "witnessed_by": [
+            "A",
+            "B",
+            "C"
+          ]
+        },
+        {
+          "event_id": 2,
+          "text": "Harper texts Daniel privately that dinner is moved to 8 PM.",
+          "witnessed_by": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "event_id": 3,
+          "text": "Grace asks Daniel what time dinner is, but Daniel is on the phone and doesn't hear her.",
+          "witnessed_by": [
+            "C"
+          ]
+        }
+      ],
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_3"
+        ]
+      },
+      "ground_truth": {
+        "A_believes_dinner_time": "8 PM",
+        "B_believes_dinner_time": "8 PM",
+        "C_believes_dinner_time": "7 PM"
+      },
+      "tags": [
+        "schedule_change",
+        "selective_communication",
+        "information_asymmetry"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "scenario_id": "SCN_009",
+      "setting": "domestic",
+      "characters": {
+        "A": "Ella",
+        "B": "Marcus",
+        "C": "Freya"
+      },
+      "events": [
+        {
+          "event_id": 1,
+          "text": "Ella puts her keys in the blue bowl by the front door.",
+          "witnessed_by": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "event_id": 2,
+          "text": "Marcus accidentally knocks the bowl and the keys fall behind the shoe rack.",
+          "witnessed_by": [
+            "B"
+          ]
+        },
+        {
+          "event_id": 3,
+          "text": "Freya finds the keys behind the shoe rack and puts them in her pocket.",
+          "witnessed_by": [
+            "C"
+          ]
+        },
+        {
+          "event_id": 4,
+          "text": "Ella comes to the front door looking for her keys.",
+          "witnessed_by": [
+            "A"
+          ]
+        }
+      ],
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "ground_truth": {
+        "A_believes_keys_location": "blue bowl",
+        "B_believes_keys_location": "behind shoe rack",
+        "C_believes_keys_location": "her pocket"
+      },
+      "tags": [
+        "object_location",
+        "chain_transfer",
+        "false_belief"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "scenario_id": "SCN_010",
+      "setting": "domestic",
+      "characters": {
+        "A": "Aiden",
+        "B": "Clara",
+        "C": "Finn"
+      },
+      "events": [
+        {
+          "event_id": 1,
+          "text": "Aiden tells Clara he is feeling fine.",
+          "witnessed_by": [
+            "A",
+            "B"
+          ]
+        },
+        {
+          "event_id": 2,
+          "text": "Aiden privately tells Finn he actually feels sick but doesn't want Clara to worry.",
+          "witnessed_by": [
+            "A",
+            "C"
+          ]
+        },
+        {
+          "event_id": 3,
+          "text": "Clara notices Aiden looks pale but doesn't say anything.",
+          "witnessed_by": [
+            "B"
+          ]
+        }
+      ],
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_2"
+        ]
+      },
+      "ground_truth": {
+        "A_believes_about_own_health": "sick",
+        "B_believes_about_A_health": "says fine but looks pale",
+        "C_believes_about_A_health": "sick"
+      },
+      "tags": [
+        "deception",
+        "emotional_state",
+        "information_asymmetry"
+      ],
+      "difficulty": "medium"
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "Q_SCN001_T1",
+      "scenario_id": "SCN_001",
+      "variant": "original",
+      "tier": 1,
+      "tier_name": "first_order_tom",
+      "question_text": "Based on what Sara has witnessed, what does Sara believe about the notebook location?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "Sara does not know",
+        "B": "drawer",
+        "C": "Sara has no opinion about it",
+        "D": "kitchen table"
+      },
+      "correct_answer": "D",
+      "explanation": "Sara only witnessed event_1, event_3. They did not witness event_2. Therefore, Sara believes the notebook location is: kitchen table.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN001_T2",
+      "scenario_id": "SCN_001",
+      "variant": "original",
+      "tier": 2,
+      "tier_name": "second_order_tom",
+      "question_text": "What does Sara think Tom believes about the notebook location?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "Tom has never encountered the notebook location",
+        "B": "Sara thinks Tom doesn't know about the notebook location",
+        "C": "kitchen table",
+        "D": "drawer"
+      },
+      "correct_answer": "C",
+      "explanation": "Sara knows that Tom was present for event_1. From Sara's perspective, Tom's belief would be: kitchen table. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN001_T3",
+      "scenario_id": "SCN_001",
+      "variant": "original",
+      "tier": 3,
+      "tier_name": "counterfactual_tom",
+      "question_text": "If Sara had witnessed event_2, what would Sara most likely think about Tom's intention?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "Tom was trying to help or organize",
+        "B": "Tom was unaware of the consequences",
+        "C": "Tom was confused or mistaken",
+        "D": "Tom was acting with hidden intent"
+      },
+      "correct_answer": "D",
+      "explanation": "Counterfactually, if Sara had witnessed event_2 (Tom moves the notebook to the drawer while Sara is in the garden.), Sara would likely interpret Tom's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN002_T1",
+      "scenario_id": "SCN_002",
+      "variant": "original",
+      "tier": 1,
+      "tier_name": "first_order_tom",
+      "question_text": "Based on what Liam has witnessed, what does Liam believe about the gift location?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "garage",
+        "B": "true but does not know it is a gift",
+        "C": "hallway closet",
+        "D": "Liam does not know"
+      },
+      "correct_answer": "C",
+      "explanation": "Liam only witnessed event_1. They did not witness event_2, event_3. Therefore, Liam believes the gift location is: hallway closet.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN002_T2",
+      "scenario_id": "SCN_002",
+      "variant": "original",
+      "tier": 2,
+      "tier_name": "second_order_tom",
+      "question_text": "What does Liam think Nora believes about the gift location?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "garage",
+        "B": "true but does not know it is a gift",
+        "C": "Liam thinks Nora doesn't know about the gift location",
+        "D": "hallway closet"
+      },
+      "correct_answer": "D",
+      "explanation": "Liam knows that Nora was present for some events. From Liam's perspective, Nora's belief would be: hallway closet. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN002_T3",
+      "scenario_id": "SCN_002",
+      "variant": "original",
+      "tier": 3,
+      "tier_name": "counterfactual_tom",
+      "question_text": "If Liam had witnessed event_2, what would Liam most likely think about Nora's intention?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "Nora was trying to help or organize",
+        "B": "Nora was unaware of the consequences",
+        "C": "Nora was confused or mistaken",
+        "D": "Nora was acting with hidden intent"
+      },
+      "correct_answer": "D",
+      "explanation": "Counterfactually, if Liam had witnessed event_2 (Nora finds the gift while cleaning and moves it to the garage.), Liam would likely interpret Nora's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN003_T1",
+      "scenario_id": "SCN_003",
+      "variant": "original",
+      "tier": 1,
+      "tier_name": "first_order_tom",
+      "question_text": "Based on what Emma has witnessed, what does Emma believe about the cookies status?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "eaten by Ryan",
+        "B": "eaten by himself",
+        "C": "still on counter cooling",
+        "D": "Emma does not know"
+      },
+      "correct_answer": "C",
+      "explanation": "Emma only witnessed event_1, event_3. They did not witness event_2. Therefore, Emma believes the cookies status is: still on counter cooling.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN003_T2",
+      "scenario_id": "SCN_003",
+      "variant": "original",
+      "tier": 2,
+      "tier_name": "second_order_tom",
+      "question_text": "What does Emma think Ryan believes about the cookies status?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "eaten by himself",
+        "B": "Emma thinks Ryan doesn't know about the cookies status",
+        "C": "still on counter cooling",
+        "D": "eaten by Ryan"
+      },
+      "correct_answer": "C",
+      "explanation": "Emma knows that Ryan was present for event_1, event_3. From Emma's perspective, Ryan's belief would be: still on counter cooling. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN003_T3",
+      "scenario_id": "SCN_003",
+      "variant": "original",
+      "tier": 3,
+      "tier_name": "counterfactual_tom",
+      "question_text": "If Emma had witnessed event_2, what would Emma most likely think about Ryan's intention?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "Ryan was acting with hidden intent",
+        "B": "Ryan was confused or mistaken",
+        "C": "Ryan was trying to help or organize",
+        "D": "Ryan was unaware of the consequences"
+      },
+      "correct_answer": "A",
+      "explanation": "Counterfactually, if Emma had witnessed event_2 (Ryan eats all the cookies while Emma is upstairs.), Emma would likely interpret Ryan's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN004_T1",
+      "scenario_id": "SCN_004",
+      "variant": "original",
+      "tier": 1,
+      "tier_name": "first_order_tom",
+      "question_text": "Based on what Mia has witnessed, what does Mia believe about the phone location?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "bedroom",
+        "B": "Mia does not know",
+        "C": "bedroom (correct by coincidence)",
+        "D": "kitchen"
+      },
+      "correct_answer": "C",
+      "explanation": "Mia only witnessed event_1, event_4. They did not witness event_2, event_3. Therefore, Mia believes the phone location is: bedroom (correct by coincidence).",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN004_T2",
+      "scenario_id": "SCN_004",
+      "variant": "original",
+      "tier": 2,
+      "tier_name": "second_order_tom",
+      "question_text": "What does Mia think David believes about the phone location?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "bedroom",
+        "B": "kitchen",
+        "C": "Mia thinks David doesn't know about the phone location",
+        "D": "bedroom (correct by coincidence)"
+      },
+      "correct_answer": "D",
+      "explanation": "Mia knows that David was present for some events. From Mia's perspective, David's belief would be: bedroom (correct by coincidence). This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN004_T3",
+      "scenario_id": "SCN_004",
+      "variant": "original",
+      "tier": 3,
+      "tier_name": "counterfactual_tom",
+      "question_text": "If Mia had witnessed event_2, what would Mia most likely think about David's intention?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "David was unaware of the consequences",
+        "B": "David was confused or mistaken",
+        "C": "David was trying to help or organize",
+        "D": "David was acting with hidden intent"
+      },
+      "correct_answer": "D",
+      "explanation": "Counterfactually, if Mia had witnessed event_2 (David takes Mia's phone to look up a recipe in the kitchen.), Mia would likely interpret David's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN005_T1",
+      "scenario_id": "SCN_005",
+      "variant": "original",
+      "tier": 1,
+      "tier_name": "first_order_tom",
+      "question_text": "Based on what Olivia has witnessed, what does Olivia believe about the destination?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "Olivia has no opinion about it",
+        "B": "grocery store",
+        "C": "pharmacy",
+        "D": "Olivia does not know"
+      },
+      "correct_answer": "C",
+      "explanation": "Olivia only witnessed event_1, event_2. They did not witness event_3. Therefore, Olivia believes the destination is: pharmacy.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN005_T2",
+      "scenario_id": "SCN_005",
+      "variant": "original",
+      "tier": 2,
+      "tier_name": "second_order_tom",
+      "question_text": "What does Olivia think Ethan believes about the destination?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "Olivia thinks Ethan doesn't know about the destination",
+        "B": "Ethan has never encountered the destination",
+        "C": "grocery store",
+        "D": "pharmacy"
+      },
+      "correct_answer": "D",
+      "explanation": "Olivia knows that Ethan was present for event_1. From Olivia's perspective, Ethan's belief would be: pharmacy. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN005_T3",
+      "scenario_id": "SCN_005",
+      "variant": "original",
+      "tier": 3,
+      "tier_name": "counterfactual_tom",
+      "question_text": "If Olivia had witnessed event_3, what would Olivia most likely think about Ethan's intention?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "Ethan was acting with hidden intent",
+        "B": "Ethan was trying to help or organize",
+        "C": "Ethan was unaware of the consequences",
+        "D": "Ethan was confused or mistaken"
+      },
+      "correct_answer": "A",
+      "explanation": "Counterfactually, if Olivia had witnessed event_3 (Chloe does not tell Ethan about the change of plans.), Olivia would likely interpret Ethan's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN006_T1",
+      "scenario_id": "SCN_006",
+      "variant": "original",
+      "tier": 1,
+      "tier_name": "first_order_tom",
+      "question_text": "Based on what Noah has witnessed, what does Noah believe about the remote location?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "Noah has no opinion about it",
+        "B": "coffee table",
+        "C": "Noah does not know",
+        "D": "bookshelf"
+      },
+      "correct_answer": "B",
+      "explanation": "Noah only witnessed event_1, event_4. They did not witness event_2, event_3. Therefore, Noah believes the remote location is: coffee table.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN006_T2",
+      "scenario_id": "SCN_006",
+      "variant": "original",
+      "tier": 2,
+      "tier_name": "second_order_tom",
+      "question_text": "What does Noah think Ava believes about the remote location?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "bookshelf",
+        "B": "Ava has never encountered the remote location",
+        "C": "Noah thinks Ava doesn't know about the remote location",
+        "D": "coffee table"
+      },
+      "correct_answer": "D",
+      "explanation": "Noah knows that Ava was present for event_1. From Noah's perspective, Ava's belief would be: coffee table. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN006_T3",
+      "scenario_id": "SCN_006",
+      "variant": "original",
+      "tier": 3,
+      "tier_name": "counterfactual_tom",
+      "question_text": "If Noah had witnessed event_2, what would Noah most likely think about Ava's intention?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "Ava was trying to help or organize",
+        "B": "Ava was unaware of the consequences",
+        "C": "Ava was acting with hidden intent",
+        "D": "Ava was confused or mistaken"
+      },
+      "correct_answer": "C",
+      "explanation": "Counterfactually, if Noah had witnessed event_2 (Ava moves the remote to the bookshelf while Noah is in the bathroom.), Noah would likely interpret Ava's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN007_T1",
+      "scenario_id": "SCN_007",
+      "variant": "original",
+      "tier": 1,
+      "tier_name": "first_order_tom",
+      "question_text": "Based on what Isabella has witnessed, what does Isabella believe about the present location?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "Isabella has no opinion about it",
+        "B": "Isabella does not know",
+        "C": "under the bed",
+        "D": "top of wardrobe"
+      },
+      "correct_answer": "D",
+      "explanation": "Isabella only witnessed event_1. They did not witness event_2, event_3. Therefore, Isabella believes the present location is: top of wardrobe.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN007_T2",
+      "scenario_id": "SCN_007",
+      "variant": "original",
+      "tier": 2,
+      "tier_name": "second_order_tom",
+      "question_text": "What does Isabella think James believes about the present location?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "top of wardrobe",
+        "B": "under the bed",
+        "C": "Isabella thinks James doesn't know about the present location",
+        "D": "James has never encountered the present location"
+      },
+      "correct_answer": "A",
+      "explanation": "Isabella knows that James was present for some events. From Isabella's perspective, James's belief would be: top of wardrobe. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN007_T3",
+      "scenario_id": "SCN_007",
+      "variant": "original",
+      "tier": 3,
+      "tier_name": "counterfactual_tom",
+      "question_text": "If Isabella had witnessed event_2, what would Isabella most likely think about James's intention?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "James was acting with hidden intent",
+        "B": "James was confused or mistaken",
+        "C": "James was unaware of the consequences",
+        "D": "James was trying to help or organize"
+      },
+      "correct_answer": "A",
+      "explanation": "Counterfactually, if Isabella had witnessed event_2 (James sees Isabella going to the wardrobe and assumes she hid something there.), Isabella would likely interpret James's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN008_T1",
+      "scenario_id": "SCN_008",
+      "variant": "original",
+      "tier": 1,
+      "tier_name": "first_order_tom",
+      "question_text": "Based on what Harper has witnessed, what does Harper believe about the dinner time?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "8 PM",
+        "B": "Harper has no opinion about it",
+        "C": "Harper does not know",
+        "D": "7 PM"
+      },
+      "correct_answer": "A",
+      "explanation": "Harper only witnessed event_1, event_2. They did not witness event_3. Therefore, Harper believes the dinner time is: 8 PM.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN008_T2",
+      "scenario_id": "SCN_008",
+      "variant": "original",
+      "tier": 2,
+      "tier_name": "second_order_tom",
+      "question_text": "What does Harper think Daniel believes about the dinner time?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "7 PM",
+        "B": "Daniel has never encountered the dinner time",
+        "C": "Harper thinks Daniel doesn't know about the dinner time",
+        "D": "8 PM"
+      },
+      "correct_answer": "D",
+      "explanation": "Harper knows that Daniel was present for event_1, event_2. From Harper's perspective, Daniel's belief would be: 8 PM. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN008_T3",
+      "scenario_id": "SCN_008",
+      "variant": "original",
+      "tier": 3,
+      "tier_name": "counterfactual_tom",
+      "question_text": "If Harper had witnessed event_3, what would Harper most likely think about Daniel's intention?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "Daniel was confused or mistaken",
+        "B": "Daniel was unaware of the consequences",
+        "C": "Daniel was acting with hidden intent",
+        "D": "Daniel was trying to help or organize"
+      },
+      "correct_answer": "C",
+      "explanation": "Counterfactually, if Harper had witnessed event_3 (Grace asks Daniel what time dinner is, but Daniel is on the phone and doesn't hear her.), Harper would likely interpret Daniel's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN009_T1",
+      "scenario_id": "SCN_009",
+      "variant": "original",
+      "tier": 1,
+      "tier_name": "first_order_tom",
+      "question_text": "Based on what Ella has witnessed, what does Ella believe about the keys location?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "her pocket",
+        "B": "blue bowl",
+        "C": "behind shoe rack",
+        "D": "Ella does not know"
+      },
+      "correct_answer": "B",
+      "explanation": "Ella only witnessed event_1, event_4. They did not witness event_2, event_3. Therefore, Ella believes the keys location is: blue bowl.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN009_T2",
+      "scenario_id": "SCN_009",
+      "variant": "original",
+      "tier": 2,
+      "tier_name": "second_order_tom",
+      "question_text": "What does Ella think Marcus believes about the keys location?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "behind shoe rack",
+        "B": "Ella thinks Marcus doesn't know about the keys location",
+        "C": "blue bowl",
+        "D": "her pocket"
+      },
+      "correct_answer": "C",
+      "explanation": "Ella knows that Marcus was present for event_1. From Ella's perspective, Marcus's belief would be: blue bowl. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN009_T3",
+      "scenario_id": "SCN_009",
+      "variant": "original",
+      "tier": 3,
+      "tier_name": "counterfactual_tom",
+      "question_text": "If Ella had witnessed event_2, what would Ella most likely think about Marcus's intention?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "Marcus was unaware of the consequences",
+        "B": "Marcus was confused or mistaken",
+        "C": "Marcus was trying to help or organize",
+        "D": "Marcus was acting with hidden intent"
+      },
+      "correct_answer": "D",
+      "explanation": "Counterfactually, if Ella had witnessed event_2 (Marcus accidentally knocks the bowl and the keys fall behind the shoe rack.), Ella would likely interpret Marcus's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN010_T1",
+      "scenario_id": "SCN_010",
+      "variant": "original",
+      "tier": 1,
+      "tier_name": "first_order_tom",
+      "question_text": "Based on what Aiden has witnessed, what does Aiden believe about the about own health?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "says fine but looks pale",
+        "B": "Aiden has no opinion about it",
+        "C": "sick",
+        "D": "Aiden does not know"
+      },
+      "correct_answer": "C",
+      "explanation": "Aiden only witnessed event_1, event_2. They did not witness event_3. Therefore, Aiden believes the about own health is: sick.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN010_T2",
+      "scenario_id": "SCN_010",
+      "variant": "original",
+      "tier": 2,
+      "tier_name": "second_order_tom",
+      "question_text": "What does Aiden think Clara believes about the about own health?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "Clara has never encountered the about own health",
+        "B": "says fine but looks pale",
+        "C": "sick",
+        "D": "Aiden thinks Clara doesn't know about the about own health"
+      },
+      "correct_answer": "C",
+      "explanation": "Aiden knows that Clara was present for event_1. From Aiden's perspective, Clara's belief would be: sick. This tests whether the model distinguishes 'what B actually knows' from 'what A thinks B knows'.",
+      "requires_cot": true
+    },
+    {
+      "question_id": "Q_SCN010_T3",
+      "scenario_id": "SCN_010",
+      "variant": "original",
+      "tier": 3,
+      "tier_name": "counterfactual_tom",
+      "question_text": "If Aiden had witnessed event_3, what would Aiden most likely think about Clara's intention?",
+      "answer_type": "multiple_choice",
+      "choices": {
+        "A": "Clara was acting with hidden intent",
+        "B": "Clara was trying to help or organize",
+        "C": "Clara was confused or mistaken",
+        "D": "Clara was unaware of the consequences"
+      },
+      "correct_answer": "A",
+      "explanation": "Counterfactually, if Aiden had witnessed event_3 (Clara notices Aiden looks pale but doesn't say anything.), Aiden would likely interpret Clara's action as intentional or purposeful. Without additional context suggesting benign intent, the default social interpretation leans toward hidden intent.",
+      "requires_cot": true
+    }
+  ],
+  "variants": [
+    {
+      "variant_id": "VAR_SCN001_OR",
+      "scenario_id": "SCN_001",
+      "variant_type": "original",
+      "character_map": {
+        "A": "Sara",
+        "B": "Tom",
+        "C": "Maya"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Sara places her red notebook on the kitchen table.",
+        "Tom moves the notebook to the drawer while Sara is in the garden.",
+        "Sara comes back inside without speaking to Tom or Maya."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_2"
+        ]
+      },
+      "notes": "Original scenario, no changes."
+    },
+    {
+      "variant_id": "VAR_SCN001_PA",
+      "scenario_id": "SCN_001",
+      "variant_type": "paraphrase_a",
+      "character_map": {
+        "A": "Priya",
+        "B": "James",
+        "C": "Lucia"
+      },
+      "setting_change": "office breakroom instead of original setting",
+      "object_change": "blue folder instead of original object",
+      "events_text": [
+        "Priya places her red notebook on the kitchen table.",
+        "James moves the notebook to the drawer while Priya is in the garden.",
+        "Priya comes back inside without speaking to James or Lucia."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_2"
+        ]
+      },
+      "notes": "Character names, setting, and object changed. Information access structure identical to original."
+    },
+    {
+      "variant_id": "VAR_SCN001_PB",
+      "scenario_id": "SCN_001",
+      "variant_type": "paraphrase_b",
+      "character_map": {
+        "A": "Sara",
+        "B": "Tom",
+        "C": "Maya"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Sara sets down her red notebook on the kitchen table.",
+        "Tom transfers the notebook to the drawer while Sara is in the garden.",
+        "Sara comes back inside without speaking to Tom or Maya."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_2"
+        ]
+      },
+      "notes": "Vocabulary and sentence structure changed. Event sequence and information access identical."
+    },
+    {
+      "variant_id": "VAR_SCN001_RS",
+      "scenario_id": "SCN_001",
+      "variant_type": "role_swap",
+      "character_map": {
+        "A": "Tom",
+        "B": "Sara",
+        "C": "Maya"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Tom places her red notebook on the kitchen table.",
+        "Sara moves the notebook to the drawer while Tom is in the garden.",
+        "Tom comes back inside without speaking to Sara or Maya."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_2"
+        ]
+      },
+      "notes": "Characters A and B swapped in terms of information access. Setting and object unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN001_DI",
+      "scenario_id": "SCN_001",
+      "variant_type": "distractor",
+      "character_map": {
+        "A": "Sara",
+        "B": "Tom",
+        "C": "Maya"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Sara places her red notebook on the kitchen table.",
+        "Tom moves the notebook to the drawer while Sara is in the garden.",
+        "Someone in the background comments that everything is exactly where it was left.",
+        "Sara comes back inside without speaking to Tom or Maya."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_2"
+        ]
+      },
+      "notes": "Distractor statement inserted at position 3. Core event sequence and ground truth unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN002_OR",
+      "scenario_id": "SCN_002",
+      "variant_type": "original",
+      "character_map": {
+        "A": "Liam",
+        "B": "Nora",
+        "C": "Jake"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Liam hides a birthday gift for Jake inside the hallway closet.",
+        "Nora finds the gift while cleaning and moves it to the garage.",
+        "Jake overhears Nora telling a friend on the phone that she put something in the garage."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1"
+        ],
+        "B_knows": [
+          "event_2"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "notes": "Original scenario, no changes."
+    },
+    {
+      "variant_id": "VAR_SCN002_PA",
+      "scenario_id": "SCN_002",
+      "variant_type": "paraphrase_a",
+      "character_map": {
+        "A": "Aiko",
+        "B": "Derek",
+        "C": "Fatima"
+      },
+      "setting_change": "university lab instead of original setting",
+      "object_change": "silver watch instead of original object",
+      "events_text": [
+        "Aiko hides a birthday gift for Fatima inside the hallway closet.",
+        "Derek finds the gift while cleaning and moves it to the garage.",
+        "Fatima overhears Derek telling a friend on the phone that she put something in the garage."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1"
+        ],
+        "B_knows": [
+          "event_2"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "notes": "Character names, setting, and object changed. Information access structure identical to original."
+    },
+    {
+      "variant_id": "VAR_SCN002_PB",
+      "scenario_id": "SCN_002",
+      "variant_type": "paraphrase_b",
+      "character_map": {
+        "A": "Liam",
+        "B": "Nora",
+        "C": "Jake"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Liam hides a birthday gift for Jake inside the hallway closet.",
+        "Nora discovers the gift while cleaning and transfers it to the garage.",
+        "Jake overhears Nora telling a friend on the phone that she put something in the garage."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1"
+        ],
+        "B_knows": [
+          "event_2"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "notes": "Vocabulary and sentence structure changed. Event sequence and information access identical."
+    },
+    {
+      "variant_id": "VAR_SCN002_RS",
+      "scenario_id": "SCN_002",
+      "variant_type": "role_swap",
+      "character_map": {
+        "A": "Nora",
+        "B": "Liam",
+        "C": "Jake"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Nora hides a birthday gift for Jake inside the hallway closet.",
+        "Liam finds the gift while cleaning and moves it to the garage.",
+        "Jake overhears Liam telling a friend on the phone that she put something in the garage."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "notes": "Characters A and B swapped in terms of information access. Setting and object unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN002_DI",
+      "scenario_id": "SCN_002",
+      "variant_type": "distractor",
+      "character_map": {
+        "A": "Liam",
+        "B": "Nora",
+        "C": "Jake"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Liam hides a birthday gift for Jake inside the hallway closet.",
+        "Nora finds the gift while cleaning and moves it to the garage.",
+        "A passerby remarks to Liam that Nora seemed to be rearranging things.",
+        "Jake overhears Nora telling a friend on the phone that she put something in the garage."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1"
+        ],
+        "B_knows": [
+          "event_2"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "notes": "Distractor statement inserted at position 3. Core event sequence and ground truth unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN003_OR",
+      "scenario_id": "SCN_003",
+      "variant_type": "original",
+      "character_map": {
+        "A": "Emma",
+        "B": "Ryan",
+        "C": "Zoe"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Emma bakes cookies and leaves them on the counter to cool.",
+        "Ryan eats all the cookies while Emma is upstairs.",
+        "Emma calls down from upstairs asking if the cookies have cooled."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ]
+      },
+      "notes": "Original scenario, no changes."
+    },
+    {
+      "variant_id": "VAR_SCN003_PA",
+      "scenario_id": "SCN_003",
+      "variant_type": "paraphrase_a",
+      "character_map": {
+        "A": "Chen",
+        "B": "Olga",
+        "C": "Marcus"
+      },
+      "setting_change": "community center kitchen instead of original setting",
+      "object_change": "ceramic mug instead of original object",
+      "events_text": [
+        "Chen bakes cookies and leaves them on the counter to cool.",
+        "Olga eats all the cookies while Chen is upstairs.",
+        "Chen calls down from upstairs asking if the cookies have cooled."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ]
+      },
+      "notes": "Character names, setting, and object changed. Information access structure identical to original."
+    },
+    {
+      "variant_id": "VAR_SCN003_PB",
+      "scenario_id": "SCN_003",
+      "variant_type": "paraphrase_b",
+      "character_map": {
+        "A": "Emma",
+        "B": "Ryan",
+        "C": "Zoe"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Emma bakes cookies and deposits them on the counter to cool.",
+        "Ryan eats all the cookies while Emma is upstairs.",
+        "Emma calls down from upstairs asking if the cookies have cooled."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ]
+      },
+      "notes": "Vocabulary and sentence structure changed. Event sequence and information access identical."
+    },
+    {
+      "variant_id": "VAR_SCN003_RS",
+      "scenario_id": "SCN_003",
+      "variant_type": "role_swap",
+      "character_map": {
+        "A": "Ryan",
+        "B": "Emma",
+        "C": "Zoe"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Ryan bakes cookies and leaves them on the counter to cool.",
+        "Emma eats all the cookies while Ryan is upstairs.",
+        "Ryan calls down from upstairs asking if the cookies have cooled."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ]
+      },
+      "notes": "Characters A and B swapped in terms of information access. Setting and object unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN003_DI",
+      "scenario_id": "SCN_003",
+      "variant_type": "distractor",
+      "character_map": {
+        "A": "Emma",
+        "B": "Ryan",
+        "C": "Zoe"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Emma bakes cookies and leaves them on the counter to cool.",
+        "Ryan eats all the cookies while Emma is upstairs.",
+        "Someone in the background comments that everything is exactly where it was left.",
+        "Emma calls down from upstairs asking if the cookies have cooled."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_2",
+          "event_3"
+        ]
+      },
+      "notes": "Distractor statement inserted at position 3. Core event sequence and ground truth unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN004_OR",
+      "scenario_id": "SCN_004",
+      "variant_type": "original",
+      "character_map": {
+        "A": "Mia",
+        "B": "David",
+        "C": "Lily"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Mia puts her phone on charge in the bedroom.",
+        "David takes Mia's phone to look up a recipe in the kitchen.",
+        "Lily puts the phone back in the bedroom before Mia returns.",
+        "Mia comes back to the bedroom."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "B_knows": [
+          "event_2"
+        ],
+        "C_knows": [
+          "event_2",
+          "event_3"
+        ],
+        "D_knows": []
+      },
+      "notes": "Original scenario, no changes."
+    },
+    {
+      "variant_id": "VAR_SCN004_PA",
+      "scenario_id": "SCN_004",
+      "variant_type": "paraphrase_a",
+      "character_map": {
+        "A": "Amara",
+        "B": "Sven",
+        "C": "Yuki"
+      },
+      "setting_change": "hotel lobby instead of original setting",
+      "object_change": "leather journal instead of original object",
+      "events_text": [
+        "Amara puts her phone on charge in the bedroom.",
+        "Sven takes Amara's phone to look up a recipe in the kitchen.",
+        "Yuki puts the phone back in the bedroom before Amara returns.",
+        "Amara comes back to the bedroom."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "B_knows": [
+          "event_2"
+        ],
+        "C_knows": [
+          "event_2",
+          "event_3"
+        ],
+        "D_knows": []
+      },
+      "notes": "Character names, setting, and object changed. Information access structure identical to original."
+    },
+    {
+      "variant_id": "VAR_SCN004_PB",
+      "scenario_id": "SCN_004",
+      "variant_type": "paraphrase_b",
+      "character_map": {
+        "A": "Mia",
+        "B": "David",
+        "C": "Lily"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Mia positions her phone on charge in the bedroom.",
+        "David retrieves Mia's phone to look up a recipe in the kitchen.",
+        "Lily positions the phone back in the bedroom before Mia comes back.",
+        "Mia comes back to the bedroom."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "B_knows": [
+          "event_2"
+        ],
+        "C_knows": [
+          "event_2",
+          "event_3"
+        ],
+        "D_knows": []
+      },
+      "notes": "Vocabulary and sentence structure changed. Event sequence and information access identical."
+    },
+    {
+      "variant_id": "VAR_SCN004_RS",
+      "scenario_id": "SCN_004",
+      "variant_type": "role_swap",
+      "character_map": {
+        "A": "David",
+        "B": "Mia",
+        "C": "Lily"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "David puts her phone on charge in the bedroom.",
+        "Mia takes David's phone to look up a recipe in the kitchen.",
+        "Lily puts the phone back in the bedroom before David returns.",
+        "David comes back to the bedroom."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "C_knows": [
+          "event_2",
+          "event_3"
+        ],
+        "D_knows": []
+      },
+      "notes": "Characters A and B swapped in terms of information access. Setting and object unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN004_DI",
+      "scenario_id": "SCN_004",
+      "variant_type": "distractor",
+      "character_map": {
+        "A": "Mia",
+        "B": "David",
+        "C": "Lily"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Mia puts her phone on charge in the bedroom.",
+        "David takes Mia's phone to look up a recipe in the kitchen.",
+        "A neighbor mentions to Mia that they thought they saw David near the original spot earlier.",
+        "Lily puts the phone back in the bedroom before Mia returns.",
+        "Mia comes back to the bedroom."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "B_knows": [
+          "event_2"
+        ],
+        "C_knows": [
+          "event_2",
+          "event_3"
+        ],
+        "D_knows": []
+      },
+      "notes": "Distractor statement inserted at position 3. Core event sequence and ground truth unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN005_OR",
+      "scenario_id": "SCN_005",
+      "variant_type": "original",
+      "character_map": {
+        "A": "Olivia",
+        "B": "Ethan",
+        "C": "Chloe"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Olivia tells Ethan she is going to the grocery store.",
+        "After Ethan leaves the room, Olivia changes her mind and decides to go to the pharmacy instead.",
+        "Chloe does not tell Ethan about the change of plans."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1"
+        ],
+        "C_knows": [
+          "event_2",
+          "event_3"
+        ]
+      },
+      "notes": "Original scenario, no changes."
+    },
+    {
+      "variant_id": "VAR_SCN005_PA",
+      "scenario_id": "SCN_005",
+      "variant_type": "paraphrase_a",
+      "character_map": {
+        "A": "Tariq",
+        "B": "Elena",
+        "C": "Boris"
+      },
+      "setting_change": "co-working space instead of original setting",
+      "object_change": "USB drive instead of original object",
+      "events_text": [
+        "Tariq tells Elena she is going to the grocery store.",
+        "After Elena leaves the room, Tariq changes her mind and decides to go to the pharmacy instead.",
+        "Boris does not tell Elena about the change of plans."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1"
+        ],
+        "C_knows": [
+          "event_2",
+          "event_3"
+        ]
+      },
+      "notes": "Character names, setting, and object changed. Information access structure identical to original."
+    },
+    {
+      "variant_id": "VAR_SCN005_PB",
+      "scenario_id": "SCN_005",
+      "variant_type": "paraphrase_b",
+      "character_map": {
+        "A": "Olivia",
+        "B": "Ethan",
+        "C": "Chloe"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Olivia informs Ethan she is going to the grocery store.",
+        "After Ethan deposits the room, Olivia changes her mind and decides to go to the pharmacy instead.",
+        "Chloe does not tell Ethan about the change of plans."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1"
+        ],
+        "C_knows": [
+          "event_2",
+          "event_3"
+        ]
+      },
+      "notes": "Vocabulary and sentence structure changed. Event sequence and information access identical."
+    },
+    {
+      "variant_id": "VAR_SCN005_RS",
+      "scenario_id": "SCN_005",
+      "variant_type": "role_swap",
+      "character_map": {
+        "A": "Ethan",
+        "B": "Olivia",
+        "C": "Chloe"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Ethan tells Olivia she is going to the grocery store.",
+        "After Olivia leaves the room, Ethan changes her mind and decides to go to the pharmacy instead.",
+        "Chloe does not tell Olivia about the change of plans."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_2",
+          "event_3"
+        ]
+      },
+      "notes": "Characters A and B swapped in terms of information access. Setting and object unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN005_DI",
+      "scenario_id": "SCN_005",
+      "variant_type": "distractor",
+      "character_map": {
+        "A": "Olivia",
+        "B": "Ethan",
+        "C": "Chloe"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Olivia tells Ethan she is going to the grocery store.",
+        "After Ethan leaves the room, Olivia changes her mind and decides to go to the pharmacy instead.",
+        "Olivia briefly wonders if things have changed, but dismisses the thought.",
+        "Chloe does not tell Ethan about the change of plans."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1"
+        ],
+        "C_knows": [
+          "event_2",
+          "event_3"
+        ]
+      },
+      "notes": "Distractor statement inserted at position 3. Core event sequence and ground truth unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN006_OR",
+      "scenario_id": "SCN_006",
+      "variant_type": "original",
+      "character_map": {
+        "A": "Noah",
+        "B": "Ava",
+        "C": "Lucas"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Noah puts the TV remote on the coffee table.",
+        "Ava moves the remote to the bookshelf while Noah is in the bathroom.",
+        "Lucas, who was napping, wakes up and sees the remote on the bookshelf.",
+        "Noah returns from the bathroom."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_3"
+        ]
+      },
+      "notes": "Original scenario, no changes."
+    },
+    {
+      "variant_id": "VAR_SCN006_PA",
+      "scenario_id": "SCN_006",
+      "variant_type": "paraphrase_a",
+      "character_map": {
+        "A": "Zara",
+        "B": "Nils",
+        "C": "Mei"
+      },
+      "setting_change": "hospital staff room instead of original setting",
+      "object_change": "wooden box instead of original object",
+      "events_text": [
+        "Zara puts the TV remote on the coffee table.",
+        "Nils moves the remote to the bookshelf while Zara is in the bathroom.",
+        "Mei, who was napping, wakes up and sees the remote on the bookshelf.",
+        "Zara returns from the bathroom."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_3"
+        ]
+      },
+      "notes": "Character names, setting, and object changed. Information access structure identical to original."
+    },
+    {
+      "variant_id": "VAR_SCN006_PB",
+      "scenario_id": "SCN_006",
+      "variant_type": "paraphrase_b",
+      "character_map": {
+        "A": "Noah",
+        "B": "Ava",
+        "C": "Lucas"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Noah positions the TV remote on the coffee table.",
+        "Ava transfers the remote to the bookshelf while Noah is in the bathroom.",
+        "Lucas, who was napping, wakes up and observes the remote on the bookshelf.",
+        "Noah comes back from the bathroom."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_3"
+        ]
+      },
+      "notes": "Vocabulary and sentence structure changed. Event sequence and information access identical."
+    },
+    {
+      "variant_id": "VAR_SCN006_RS",
+      "scenario_id": "SCN_006",
+      "variant_type": "role_swap",
+      "character_map": {
+        "A": "Ava",
+        "B": "Noah",
+        "C": "Lucas"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Ava puts the TV remote on the coffee table.",
+        "Noah moves the remote to the bookshelf while Ava is in the bathroom.",
+        "Lucas, who was napping, wakes up and sees the remote on the bookshelf.",
+        "Ava returns from the bathroom."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_3"
+        ]
+      },
+      "notes": "Characters A and B swapped in terms of information access. Setting and object unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN006_DI",
+      "scenario_id": "SCN_006",
+      "variant_type": "distractor",
+      "character_map": {
+        "A": "Noah",
+        "B": "Ava",
+        "C": "Lucas"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Noah puts the TV remote on the coffee table.",
+        "Ava moves the remote to the bookshelf while Noah is in the bathroom.",
+        "Noah briefly wonders if things have changed, but dismisses the thought.",
+        "Lucas, who was napping, wakes up and sees the remote on the bookshelf.",
+        "Noah returns from the bathroom."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_3"
+        ]
+      },
+      "notes": "Distractor statement inserted at position 3. Core event sequence and ground truth unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN007_OR",
+      "scenario_id": "SCN_007",
+      "variant_type": "original",
+      "character_map": {
+        "A": "Isabella",
+        "B": "James",
+        "C": "Sophie"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Isabella wraps a present and hides it in the top of her wardrobe.",
+        "James sees Isabella going to the wardrobe and assumes she hid something there.",
+        "Sophie moves the present to under the bed when both Isabella and James are out."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1"
+        ],
+        "B_knows": [
+          "event_2"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "notes": "Original scenario, no changes."
+    },
+    {
+      "variant_id": "VAR_SCN007_PA",
+      "scenario_id": "SCN_007",
+      "variant_type": "paraphrase_a",
+      "character_map": {
+        "A": "Ines",
+        "B": "Kwame",
+        "C": "Rosa"
+      },
+      "setting_change": "airport lounge instead of original setting",
+      "object_change": "glass vase instead of original object",
+      "events_text": [
+        "Ines wraps a present and hides it in the top of her wardrobe.",
+        "Kwame sees Ines going to the wardrobe and assumes she hid something there.",
+        "Rosa moves the present to under the bed when both Ines and Kwame are out."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1"
+        ],
+        "B_knows": [
+          "event_2"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "notes": "Character names, setting, and object changed. Information access structure identical to original."
+    },
+    {
+      "variant_id": "VAR_SCN007_PB",
+      "scenario_id": "SCN_007",
+      "variant_type": "paraphrase_b",
+      "character_map": {
+        "A": "Isabella",
+        "B": "James",
+        "C": "Sophie"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Isabella wraps a present and hides it in the top of her wardrobe.",
+        "James observes Isabella going to the wardrobe and assumes she hid something there.",
+        "Sophie transfers the present to under the bed when both Isabella and James are out."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1"
+        ],
+        "B_knows": [
+          "event_2"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "notes": "Vocabulary and sentence structure changed. Event sequence and information access identical."
+    },
+    {
+      "variant_id": "VAR_SCN007_RS",
+      "scenario_id": "SCN_007",
+      "variant_type": "role_swap",
+      "character_map": {
+        "A": "James",
+        "B": "Isabella",
+        "C": "Sophie"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "James wraps a present and hides it in the top of her wardrobe.",
+        "Isabella sees James going to the wardrobe and assumes she hid something there.",
+        "Sophie moves the present to under the bed when both James and Isabella are out."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "notes": "Characters A and B swapped in terms of information access. Setting and object unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN007_DI",
+      "scenario_id": "SCN_007",
+      "variant_type": "distractor",
+      "character_map": {
+        "A": "Isabella",
+        "B": "James",
+        "C": "Sophie"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Isabella wraps a present and hides it in the top of her wardrobe.",
+        "James sees Isabella going to the wardrobe and assumes she hid something there.",
+        "A neighbor mentions to Isabella that they thought they saw James near the original spot earlier.",
+        "Sophie moves the present to under the bed when both Isabella and James are out."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1"
+        ],
+        "B_knows": [
+          "event_2"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "notes": "Distractor statement inserted at position 3. Core event sequence and ground truth unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN008_OR",
+      "scenario_id": "SCN_008",
+      "variant_type": "original",
+      "character_map": {
+        "A": "Harper",
+        "B": "Daniel",
+        "C": "Grace"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Harper tells Daniel and Grace that dinner will be at 7 PM.",
+        "Harper texts Daniel privately that dinner is moved to 8 PM.",
+        "Grace asks Daniel what time dinner is, but Daniel is on the phone and doesn't hear her."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_3"
+        ]
+      },
+      "notes": "Original scenario, no changes."
+    },
+    {
+      "variant_id": "VAR_SCN008_PA",
+      "scenario_id": "SCN_008",
+      "variant_type": "paraphrase_a",
+      "character_map": {
+        "A": "Dmitri",
+        "B": "Anya",
+        "C": "Felix"
+      },
+      "setting_change": "train station café instead of original setting",
+      "object_change": "gold ring instead of original object",
+      "events_text": [
+        "Dmitri tells Anya and Felix that dinner will be at 7 PM.",
+        "Dmitri texts Anya privately that dinner is moved to 8 PM.",
+        "Felix asks Anya what time dinner is, but Anya is on the phone and doesn't hear her."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_3"
+        ]
+      },
+      "notes": "Character names, setting, and object changed. Information access structure identical to original."
+    },
+    {
+      "variant_id": "VAR_SCN008_PB",
+      "scenario_id": "SCN_008",
+      "variant_type": "paraphrase_b",
+      "character_map": {
+        "A": "Harper",
+        "B": "Daniel",
+        "C": "Grace"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Harper informs Daniel and Grace that dinner will be at 7 PM.",
+        "Harper texts Daniel privately that dinner is moved to 8 PM.",
+        "Grace asks Daniel what time dinner is, but Daniel is on the phone and doesn't hear her."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_3"
+        ]
+      },
+      "notes": "Vocabulary and sentence structure changed. Event sequence and information access identical."
+    },
+    {
+      "variant_id": "VAR_SCN008_RS",
+      "scenario_id": "SCN_008",
+      "variant_type": "role_swap",
+      "character_map": {
+        "A": "Daniel",
+        "B": "Harper",
+        "C": "Grace"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Daniel tells Harper and Grace that dinner will be at 7 PM.",
+        "Daniel texts Harper privately that dinner is moved to 8 PM.",
+        "Grace asks Harper what time dinner is, but Harper is on the phone and doesn't hear her."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_3"
+        ]
+      },
+      "notes": "Characters A and B swapped in terms of information access. Setting and object unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN008_DI",
+      "scenario_id": "SCN_008",
+      "variant_type": "distractor",
+      "character_map": {
+        "A": "Harper",
+        "B": "Daniel",
+        "C": "Grace"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Harper tells Daniel and Grace that dinner will be at 7 PM.",
+        "Harper texts Daniel privately that dinner is moved to 8 PM.",
+        "Someone in the background comments that everything is exactly where it was left.",
+        "Grace asks Daniel what time dinner is, but Daniel is on the phone and doesn't hear her."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_1",
+          "event_3"
+        ]
+      },
+      "notes": "Distractor statement inserted at position 3. Core event sequence and ground truth unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN009_OR",
+      "scenario_id": "SCN_009",
+      "variant_type": "original",
+      "character_map": {
+        "A": "Ella",
+        "B": "Marcus",
+        "C": "Freya"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Ella puts her keys in the blue bowl by the front door.",
+        "Marcus accidentally knocks the bowl and the keys fall behind the shoe rack.",
+        "Freya finds the keys behind the shoe rack and puts them in her pocket.",
+        "Ella comes to the front door looking for her keys."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "notes": "Original scenario, no changes."
+    },
+    {
+      "variant_id": "VAR_SCN009_PA",
+      "scenario_id": "SCN_009",
+      "variant_type": "paraphrase_a",
+      "character_map": {
+        "A": "Layla",
+        "B": "Bjorn",
+        "C": "Hana"
+      },
+      "setting_change": "farm barn instead of original setting",
+      "object_change": "silk scarf instead of original object",
+      "events_text": [
+        "Layla puts her keys in the blue bowl by the front door.",
+        "Bjorn accidentally knocks the bowl and the keys fall behind the shoe rack.",
+        "Hana finds the keys behind the shoe rack and puts them in her pocket.",
+        "Layla comes to the front door looking for her keys."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "notes": "Character names, setting, and object changed. Information access structure identical to original."
+    },
+    {
+      "variant_id": "VAR_SCN009_PB",
+      "scenario_id": "SCN_009",
+      "variant_type": "paraphrase_b",
+      "character_map": {
+        "A": "Ella",
+        "B": "Marcus",
+        "C": "Freya"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Ella positions her keys in the blue bowl by the front door.",
+        "Marcus accidentally knocks the bowl and the keys fall behind the shoe rack.",
+        "Freya discovers the keys behind the shoe rack and positions them in her pocket.",
+        "Ella comes to the front door looking for her keys."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "notes": "Vocabulary and sentence structure changed. Event sequence and information access identical."
+    },
+    {
+      "variant_id": "VAR_SCN009_RS",
+      "scenario_id": "SCN_009",
+      "variant_type": "role_swap",
+      "character_map": {
+        "A": "Marcus",
+        "B": "Ella",
+        "C": "Freya"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Marcus puts her keys in the blue bowl by the front door.",
+        "Ella accidentally knocks the bowl and the keys fall behind the shoe rack.",
+        "Freya finds the keys behind the shoe rack and puts them in her pocket.",
+        "Marcus comes to the front door looking for her keys."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "notes": "Characters A and B swapped in terms of information access. Setting and object unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN009_DI",
+      "scenario_id": "SCN_009",
+      "variant_type": "distractor",
+      "character_map": {
+        "A": "Ella",
+        "B": "Marcus",
+        "C": "Freya"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Ella puts her keys in the blue bowl by the front door.",
+        "Marcus accidentally knocks the bowl and the keys fall behind the shoe rack.",
+        "Ella briefly wonders if things have changed, but dismisses the thought.",
+        "Freya finds the keys behind the shoe rack and puts them in her pocket.",
+        "Ella comes to the front door looking for her keys."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_4"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_3"
+        ]
+      },
+      "notes": "Distractor statement inserted at position 3. Core event sequence and ground truth unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN010_OR",
+      "scenario_id": "SCN_010",
+      "variant_type": "original",
+      "character_map": {
+        "A": "Aiden",
+        "B": "Clara",
+        "C": "Finn"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Aiden tells Clara he is feeling fine.",
+        "Aiden privately tells Finn he actually feels sick but doesn't want Clara to worry.",
+        "Clara notices Aiden looks pale but doesn't say anything."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_2"
+        ]
+      },
+      "notes": "Original scenario, no changes."
+    },
+    {
+      "variant_id": "VAR_SCN010_PA",
+      "scenario_id": "SCN_010",
+      "variant_type": "paraphrase_a",
+      "character_map": {
+        "A": "Kofi",
+        "B": "Marta",
+        "C": "Ivan"
+      },
+      "setting_change": "school staff room instead of original setting",
+      "object_change": "brass key instead of original object",
+      "events_text": [
+        "Kofi tells Marta he is feeling fine.",
+        "Kofi privately tells Ivan he actually feels sick but doesn't want Marta to worry.",
+        "Marta notices Kofi looks pale but doesn't say anything."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_2"
+        ]
+      },
+      "notes": "Character names, setting, and object changed. Information access structure identical to original."
+    },
+    {
+      "variant_id": "VAR_SCN010_PB",
+      "scenario_id": "SCN_010",
+      "variant_type": "paraphrase_b",
+      "character_map": {
+        "A": "Aiden",
+        "B": "Clara",
+        "C": "Finn"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Aiden informs Clara he is feeling fine.",
+        "Aiden privately informs Finn he actually feels sick but doesn't want Clara to worry.",
+        "Clara notices Aiden looks pale but doesn't say anything."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_2"
+        ]
+      },
+      "notes": "Vocabulary and sentence structure changed. Event sequence and information access identical."
+    },
+    {
+      "variant_id": "VAR_SCN010_RS",
+      "scenario_id": "SCN_010",
+      "variant_type": "role_swap",
+      "character_map": {
+        "A": "Clara",
+        "B": "Aiden",
+        "C": "Finn"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Clara tells Aiden he is feeling fine.",
+        "Clara privately tells Finn he actually feels sick but doesn't want Aiden to worry.",
+        "Aiden notices Clara looks pale but doesn't say anything."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "C_knows": [
+          "event_2"
+        ]
+      },
+      "notes": "Characters A and B swapped in terms of information access. Setting and object unchanged."
+    },
+    {
+      "variant_id": "VAR_SCN010_DI",
+      "scenario_id": "SCN_010",
+      "variant_type": "distractor",
+      "character_map": {
+        "A": "Aiden",
+        "B": "Clara",
+        "C": "Finn"
+      },
+      "setting_change": "none",
+      "object_change": "none",
+      "events_text": [
+        "Aiden tells Clara he is feeling fine.",
+        "Aiden privately tells Finn he actually feels sick but doesn't want Clara to worry.",
+        "Someone in the background comments that everything is exactly where it was left.",
+        "Clara notices Aiden looks pale but doesn't say anything."
+      ],
+      "logic_preserved": true,
+      "belief_state_map": {
+        "A_knows": [
+          "event_1",
+          "event_2"
+        ],
+        "B_knows": [
+          "event_1",
+          "event_3"
+        ],
+        "C_knows": [
+          "event_2"
+        ]
+      },
+      "notes": "Distractor statement inserted at position 3. Core event sequence and ground truth unchanged."
+    }
+  ]
+}

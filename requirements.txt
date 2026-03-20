@@ -1,0 +1,16 @@
+# Core dependencies
+pandas
+numpy
+
+# Visualization
+matplotlib
+seaborn
+
+# API clients
+openai
+anthropic
+google-genai
+
+# Utilities
+python-dotenv
+tqdm
