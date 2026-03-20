@@ -36,7 +36,7 @@ def compute_variant_accuracy(results: list[dict]) -> dict:
     
     for r in results:
         variant = r.get("variant", "original")
-        is_correct = r.get("predicted", "").upper() == r.get("correct", "").upper()
+        is_correct = (r.get("predicted") or "").upper() == (r.get("correct") or "").upper()
         variant_groups[variant].append(is_correct)
     
     accuracies = {}
@@ -83,7 +83,7 @@ def compute_per_scenario_variance(results: list[dict]) -> list[dict]:
     for r in results:
         sid = r.get("scenario_id", "unknown")
         variant = r.get("variant", "original")
-        is_correct = r.get("predicted", "").upper() == r.get("correct", "").upper()
+        is_correct = (r.get("predicted") or "").upper() == (r.get("correct") or "").upper()
         scenario_variant_results[sid][variant].append(is_correct)
     
     scenario_variances = []
