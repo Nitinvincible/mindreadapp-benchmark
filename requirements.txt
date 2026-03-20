@@ -10,6 +10,7 @@ seaborn
 openai
 anthropic
 google-genai
+sarvamai
 
 # Utilities
 python-dotenv

@@ -1,0 +1,29 @@
+{
+  "id": "20260320_731397b7-45dc-493e-b8cb-c9fb28700c73",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "four",
+        "refusal": null,
+        "reasoning_content": "1.  **Analyze the user's request.**\n    *   **Question:** \"What is 2+2?\"\n    *   **Constraint:** \"Answer in one word.\"\n\n2.  **Solve the math problem.**\n    *   2 + 2 = 4.\n\n3.  **Formulate the answer based on the constraint.**\n    *   The result is the number 4.\n    *   The constraint is \"one word\".\n    *   The word for the number 4 is \"four\".\n\n4.  **Check for ambiguity or alternative interpretations.**\n    *   Could \"one word\" mean a single character? No, \"four\" is a single word. \"4\" is a single character, but it's not a word. The user specifically said \"one word\".\n    *   Could the answer be something else? Like \"The answer is four\"? No, that's three words. \"Four.\" is one word. \"Four\" is one word.\n    *   Could the answer be \"The sum of two and two is four\"? No, way too many words.\n\n5.  **Finalize the answer.**\n    *   The most direct, accurate, and compliant answer is \"four\". It's a single word, it correctly answers the question, and it's unambiguous.\n\n6.  **Construct the final output.**\n    *   The output should be just the word itself, with no extra punctuation or explanation, as the user's prompt is very direct and simple. The request is \"Answer in one word.\" So, the best response is just that word.\n\n    *   Let's consider a few options:\n        *   `four` - This is the best. It's just the word.\n        *   `Four.` - This is also technically one word, but the period adds punctuation. The user didn't ask for punctuation. Sticking to the bare minimum is usually the safest bet for this kind of request.\n        *   `The answer is four.` - Fails the \"one word\" constraint.\n        *   `4` - Fails the \"one word\" constraint (it's a digit, not a word).\n\n    *   Decision: The best answer is `four`. It's clean, direct, and perfectly follows the instructions.",
+        "role": "assistant",
+        "tool_calls": null
+      }
+    }
+  ],
+  "created": 1773993505,
+  "model": "sarvam-30b",
+  "object": "chat.completion",
+  "service_tier": null,
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 502,
+    "prompt_tokens": 33,
+    "total_tokens": 535,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+  }
+}

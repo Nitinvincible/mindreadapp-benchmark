@@ -1,0 +1,302 @@
+[
+  {
+    "question_id": "Q_SCN001_T1",
+    "scenario_id": "SCN_001",
+    "tier": 1,
+    "variant": "original",
+    "predicted": null,
+    "correct": "D",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN001_T2",
+    "scenario_id": "SCN_001",
+    "tier": 2,
+    "variant": "original",
+    "predicted": null,
+    "correct": "C",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN001_T3",
+    "scenario_id": "SCN_001",
+    "tier": 3,
+    "variant": "original",
+    "predicted": null,
+    "correct": "D",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN002_T1",
+    "scenario_id": "SCN_002",
+    "tier": 1,
+    "variant": "original",
+    "predicted": null,
+    "correct": "C",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN002_T2",
+    "scenario_id": "SCN_002",
+    "tier": 2,
+    "variant": "original",
+    "predicted": null,
+    "correct": "D",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN002_T3",
+    "scenario_id": "SCN_002",
+    "tier": 3,
+    "variant": "original",
+    "predicted": null,
+    "correct": "D",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN003_T1",
+    "scenario_id": "SCN_003",
+    "tier": 1,
+    "variant": "original",
+    "predicted": null,
+    "correct": "C",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN003_T2",
+    "scenario_id": "SCN_003",
+    "tier": 2,
+    "variant": "original",
+    "predicted": null,
+    "correct": "C",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN003_T3",
+    "scenario_id": "SCN_003",
+    "tier": 3,
+    "variant": "original",
+    "predicted": null,
+    "correct": "A",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN004_T1",
+    "scenario_id": "SCN_004",
+    "tier": 1,
+    "variant": "original",
+    "predicted": null,
+    "correct": "C",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN004_T2",
+    "scenario_id": "SCN_004",
+    "tier": 2,
+    "variant": "original",
+    "predicted": null,
+    "correct": "D",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN004_T3",
+    "scenario_id": "SCN_004",
+    "tier": 3,
+    "variant": "original",
+    "predicted": null,
+    "correct": "D",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN005_T1",
+    "scenario_id": "SCN_005",
+    "tier": 1,
+    "variant": "original",
+    "predicted": null,
+    "correct": "C",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN005_T2",
+    "scenario_id": "SCN_005",
+    "tier": 2,
+    "variant": "original",
+    "predicted": null,
+    "correct": "D",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN005_T3",
+    "scenario_id": "SCN_005",
+    "tier": 3,
+    "variant": "original",
+    "predicted": null,
+    "correct": "A",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN006_T1",
+    "scenario_id": "SCN_006",
+    "tier": 1,
+    "variant": "original",
+    "predicted": null,
+    "correct": "B",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN006_T2",
+    "scenario_id": "SCN_006",
+    "tier": 2,
+    "variant": "original",
+    "predicted": null,
+    "correct": "D",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN006_T3",
+    "scenario_id": "SCN_006",
+    "tier": 3,
+    "variant": "original",
+    "predicted": null,
+    "correct": "C",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN007_T1",
+    "scenario_id": "SCN_007",
+    "tier": 1,
+    "variant": "original",
+    "predicted": null,
+    "correct": "D",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN007_T2",
+    "scenario_id": "SCN_007",
+    "tier": 2,
+    "variant": "original",
+    "predicted": null,
+    "correct": "A",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN007_T3",
+    "scenario_id": "SCN_007",
+    "tier": 3,
+    "variant": "original",
+    "predicted": null,
+    "correct": "A",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN008_T1",
+    "scenario_id": "SCN_008",
+    "tier": 1,
+    "variant": "original",
+    "predicted": null,
+    "correct": "A",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN008_T2",
+    "scenario_id": "SCN_008",
+    "tier": 2,
+    "variant": "original",
+    "predicted": null,
+    "correct": "D",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN008_T3",
+    "scenario_id": "SCN_008",
+    "tier": 3,
+    "variant": "original",
+    "predicted": null,
+    "correct": "C",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN009_T1",
+    "scenario_id": "SCN_009",
+    "tier": 1,
+    "variant": "original",
+    "predicted": null,
+    "correct": "B",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN009_T2",
+    "scenario_id": "SCN_009",
+    "tier": 2,
+    "variant": "original",
+    "predicted": null,
+    "correct": "C",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN009_T3",
+    "scenario_id": "SCN_009",
+    "tier": 3,
+    "variant": "original",
+    "predicted": null,
+    "correct": "D",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN010_T1",
+    "scenario_id": "SCN_010",
+    "tier": 1,
+    "variant": "original",
+    "predicted": null,
+    "correct": "C",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN010_T2",
+    "scenario_id": "SCN_010",
+    "tier": 2,
+    "variant": "original",
+    "predicted": null,
+    "correct": "C",
+    "is_correct": null,
+    "response_text": ""
+  },
+  {
+    "question_id": "Q_SCN010_T3",
+    "scenario_id": "SCN_010",
+    "tier": 3,
+    "variant": "original",
+    "predicted": null,
+    "correct": "A",
+    "is_correct": null,
+    "response_text": ""
+  }
+]

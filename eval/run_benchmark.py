@@ -222,10 +222,18 @@ def call_sarvam(model_string: str, api_key: str, prompt: str) -> str:
         ],
         temperature=API_PARAMS["temperature"],
         top_p=API_PARAMS["top_p"],
-        max_tokens=API_PARAMS["max_tokens"],
+        max_tokens=2048,  # Increased for reasoning models
     )
-    content = response.choices[0].message.content
-    return content if content is not None else ""
+    msg = response.choices[0].message
+    content = getattr(msg, "content", "") or ""
+    reasoning = getattr(msg, "reasoning_content", "") or ""
+    
+    # Combine so extract_answer and RCI evaluators have access to the full reasoning trace
+    full_text = content
+    if reasoning:
+        full_text = f"REASONING:\n{reasoning}\n\n{content}"
+        
+    return full_text
 
 
 def call_model(model_name: str, api_key: str, prompt: str) -> str:
